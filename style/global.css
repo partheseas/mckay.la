@@ -1,0 +1,48 @@
+html {
+  background-image: url( '../images/background.png' );
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 5px 1fr 5px;
+  grid-template-rows: 1fr 1fr 2fr;
+  grid-template-areas:
+    "left top    right"
+    "left title  right"
+    "left bottom right";
+}
+
+#title {
+  grid-area: title;
+  text-align: center;
+  font-family: brush;
+  font-size: 120pt;
+  text-shadow: black 0px 0px 10px;
+
+  color: #efffff;
+}
+
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 2px;
+}
