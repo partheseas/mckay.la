@@ -1,0 +1,45 @@
+html, body {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 300px 300px;
+
+  height: 100%;
+}
+
+#i1 {
+  background-color: #11f4bd;
+}
+
+#i2, #i4 {
+  background-color: #11f4e6;
+}
+
+#i3, #i5, #i7 {
+  background-color: #11e6f4;
+}
+
+#i6, #i8 {
+  background-color: #11d8f4;
+}
+
+#i9 {
+  background-color: #11a9f4;
+}
+
+#x1 {
+  background-color: #e87dae;
+}
+
+#x2 {
+  background-color: #4040dd;
+}
+
+#x3 {
+  background-color: #f13a3a;
+}

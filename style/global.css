@@ -12,22 +12,18 @@ html, body {
   height: 100%;
 }
 
-body {
-  display: grid;
-  grid-template-columns: 5px 1fr 5px;
-  grid-template-rows: 1fr 1fr 2fr;
-  grid-template-areas:
-    "left top    right"
-    "left title  right"
-    "left bottom right";
-}
-
 #title {
   grid-area: title;
-  text-align: center;
   font-family: brush;
-  font-size: 120pt;
+  font-size: 60pt;
   text-shadow: black 0px 0px 10px;
+
+  border-style: solid;
+  border-width: 0px 0px 0px 2px;
+  border-color: #efffff;
+
+  margin-left: 1em;
+  padding-left: 0.7em;
 
   color: #efffff;
 }

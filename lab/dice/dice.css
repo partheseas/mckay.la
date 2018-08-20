@@ -1,0 +1,51 @@
+html, body {
+  margin: 0 auto;
+  padding: 0;
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#container {
+  padding: 3em;
+
+  text-align: center;
+}
+
+#table {
+  display: grid;
+
+  margin: 10px auto;
+  width: 20em;
+
+  grid-template-columns: 4em 4em 4em 4em 4em;
+  grid-template-rows: 4em 4em;
+
+  text-align: center;
+}
+
+#table div {
+  font-size: 2.6em;
+
+  border: black 1px solid;
+  border-radius: 10%;
+
+  text-align: center;
+
+  margin: 5px;
+}
+
+#table div span {
+  vertical-align: middle;
+}
+
+#roller {
+  width: 10em;
+  height: 4em;
+}
+
+#table div.locked {
+  background-color: rgb(160, 249, 138);
+  border: rgb(32, 130, 71) 1px solid;
+}
