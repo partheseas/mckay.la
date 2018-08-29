@@ -2,14 +2,10 @@ html {
   background-image: url( '../images/background.png' );
   background-size: cover;
   background-attachment: fixed;
-}
 
-html, body {
-  margin: 0;
-  padding: 0;
-
-  width: 100%;
-  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: thin;
+  font-style: italic;
 }
 
 #title {
@@ -26,6 +22,13 @@ html, body {
   padding-left: 0.7em;
 
   color: #efffff;
+}
+
+li {
+  /* display: inline-block; */
+
+  font-size: 3em;
+  margin: 0.5em 2.5em;
 }
 
 ::-webkit-scrollbar {

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resume>
+  <applicant>
+    <name>McKayla Washburn</name>
+    <phone>8016159924</phone>
+    <email>partheseas@gmail.com</email>
+    <website>https://mckay.la/</website>
+  </applicant>
+  <references>
+    <person>
+      <name>Shannon Lott</name>
+      <phone>5036027401</phone>
+    </person>
+    <person>
+      <name>Kent Huston</name>
+      <phone>8018396549</phone>
+    </person>
+    <person>
+      <name>Jennessa White</name>
+      <phone>4352166382</phone>
+    </person>
+  </references>
+  <experience>
+    <job from="11/16" to="6/18">
+      <position>Restaurant Manager</position>
+      <company>Taco Bell</company>
+      <city>Riverton, UT</city>
+      <description>I was in charge of staffing new restaurant locations,
+        as well as supervising contractors at the construction sites to ensure
+        that the building and equipment met the necessary requirements to run
+        the store optimally once they opened.</description>
+    </job>
+    <job from="8/16" to="11/16">
+      <position>Training Coach</position>
+      <company>Freddy's</company>
+      <city>Draper, UT</city>
+      <description>I primarily focused on hiring and training staff members to
+        assist in the opening of several new locations during my time
+        with Freddy’s.</description>
+    </job>
+    <job from="4/16" to="8/16">
+      <position>Field Technician</position>
+      <company>Alder</company>
+      <city>Columbia, SC</city>
+      <description>I was responsible for scheduling installation appointments,
+        directing installations, and providing any necessary service to the
+        security systems for customers. I also assisted in inventory at our
+        warehouse, would provide support to other technicians on installations
+        and services when necessary, and insured that all their installations
+        were done properly.</description>
+    </job>
+    <job from="8/15" to="3/16">
+      <position>Account Manager</position>
+      <company>Vivint</company>
+      <city>Lindon, UT</city>
+      <description>I assisted in managing customer accounts, retention of current
+        customers, resolving customer issues, insuring high quality customer service,
+        and auditing to ensure accuracy, consistency of information on accounts,
+        and accuracy of metrics measured by the company.</description>
+    </job>
+    <job from="3/12" to="8/15">
+      <position>Assistant Manager</position>
+      <company>Taco Bell</company>
+      <city>Payson, UT</city>
+      <description>I played a key role in the training and development of all of
+        our employees and ensuring that our restaurant was as successful as possible.
+        I was responsible for management of inventory and financial security,
+        as well as oversight of the stores general operations. My store won
+        several awards during my time there and I was often called upon to
+        travel the other stores that were considered “problem children” by the
+        company for periods of several weeks to resolve issues and give instruction
+        for the management and crew to prevent further issues.</description>
+    </job>
+  </experience>
+  <education>
+    <school to="1/14" graduated="true">
+      <name>Springville High School</name>
+    </school>
+    <school from="1/18" to="current">
+      <name>Utah Valley University</name>
+      <description>I’m currently about half way through the Bachelor of Computer
+        Science program at UVU and have always been fascinated by computers. When
+        I was in 7th grade I taught myself HTML, CSS and JavaScript, and by the
+        end of high school I was contributing to open source projects on GitHub.
+        I’ve been using Node.js since the 0.4.x branch when it was still just
+        Ryan Dahl’s side project. I remember when they still used the old cloud
+        logo and I know the API like the back of my hand. More recently I’ve
+        also learned Python and C++.</description>
+    </school>
+  </education>
+</resume>
