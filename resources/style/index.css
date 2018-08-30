@@ -6,10 +6,6 @@ html {
   font-family: "Montserrat", sans-serif;
 }
 
-body {
-  margin: 0 0 0 5em;
-}
-
 #title {
   grid-area: title;
   font-family: brush;
@@ -20,6 +16,7 @@ body {
   border-width: 0px 0px 0px 2px;
   border-color: #efffff;
 
+  margin: 0.7em auto 0.7em 0.7in;
   padding: 0 0 0 0.7in;
 
   color: #efffff;
@@ -28,16 +25,27 @@ body {
 li a {
   display: block;
 
-  background-color: white;
+  transition: transform 300ms, padding 300ms, background 150ms;
 
-  margin: 1em 0 0.5em 0.45in;
-  padding: 0.5em 0 0.5em 0.25in;
-  max-width: 12em;
+  margin: 1em 0 0.5em 1.15in;
+  padding: 0.5em 0.25in;
+  max-width: 11em;
 
+  background-color: rgba( 255, 255, 255, 0.9 );
   box-shadow: 0px 0px 30px black;
+  border-radius: 4px;
 
   font-size: 2em;
-  /* margin: 0.5em 2.5em; */
+}
+
+li a:hover {
+  transform: translate( -0.1in, -0.2em );
+
+  text-decoration: none;
+
+  padding: 0.7em 0.35in;
+
+  background-color: rgba( 255, 255, 255, 1 );
 }
 
 ::-webkit-scrollbar {
