@@ -47,18 +47,3 @@ li a:hover {
 
   background-color: rgba( 255, 255, 255, 1 );
 }
-
-::-webkit-scrollbar {
-  background-color: transparent;
-  width: 5px;
-  height: 5px;
-}
-
-::-webkit-scrollbar-corner {
-  background-color: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: white;
-  border-radius: 2px;
-}
