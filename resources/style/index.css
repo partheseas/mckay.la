@@ -10,7 +10,7 @@ html {
   grid-area: title;
   font-family: brush;
   font-size: 60pt;
-  text-shadow: black 0px 0px 10px;
+  text-shadow: 0 0 0.2em black;
 
   border-style: solid;
   border-width: 0px 0px 0px 2px;
@@ -33,17 +33,22 @@ li a {
 
   background-color: rgba( 255, 255, 255, 0.9 );
   box-shadow: 0px 0px 30px black;
-  border-radius: 4px;
+  border-radius: 5px;
 
   font-size: 2em;
 }
 
 li a:hover {
-  transform: translate( -0.1in, -0.2em );
-
-  text-decoration: none;
-
-  padding: 0.7em 0.35in;
-
   background-color: rgba( 255, 255, 255, 1 );
+  transform: translate( -0.1in, -0.2em );
+  padding: 0.7em 0.35in;
+  text-decoration: none;
+}
+
+#slim-footer {
+  color: white;
+  text-shadow: 0 0 1em black;
+
+  margin: 0 0 0 1.15in;
+	font-size: 0.8em;
 }
