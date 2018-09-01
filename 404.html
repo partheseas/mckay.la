@@ -3,13 +3,13 @@
 <head>
 <title>404 :(</title>
 <script type="application/javascript">
-  var HPress, RPress, TPress, MESSAGE = "404 :";
+  let NPress, EPress, WPress, MESSAGE = "404 :";
 
   function RNDM_RG(min, max, base) {
       return Math.floor( ( Math.random() * ( ( max + 1 ) - min ) ) + min )
   }
 
-  var r = RNDM_RG(0,255),
+  let r = RNDM_RG(0,255),
       g = RNDM_RG(0,255),
       b = RNDM_RG(0,255);
 
@@ -29,10 +29,6 @@
 
       document.body.style.backgroundColor = "#" + r.toString(16) + g.toString(16) + b.toString(16)
     }, 17 )
-
-  /*setInterval( function () {
-      console.log(r,g,b)
-    }, 2000) */
   })
 
   window.addEventListener( "resize", function () {
@@ -81,6 +77,8 @@
     height: 100%;
     padding: 0;
     margin: 0;
+
+    transition: background-color 100ms;
   }
 
   div#message {
@@ -93,7 +91,7 @@
     font-family: "Calibri", Sans-serif;
     font-size: 100px;
     color: white;
-    text-shadow: 0 0 1em black;
+    text-shadow: 0 0 0.1em black;
 
     width: 100%;
     height: 100%;
