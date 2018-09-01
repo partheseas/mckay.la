@@ -1,7 +1,11 @@
-var _2d;
-var board = {};
-var snake;
-var direction;
+let _2d;
+let board = {};
+let snake;
+let direction;
+
+let snakeColor = '#edad62'
+let backgroundColor = '#a1e868'
+let nibbleColor = '#f79055'
 
 function RNDM_RG(min, max, base) {
     return Math.floor( ( Math.random() * ( ( max + 1 ) - min ) ) + min )
@@ -26,12 +30,13 @@ function v2Sub( a, b ) {
 }
 
 function setup() {
-  setSize()
   _2d = document.getElementById( 'screen' ).getContext( '2d' )
+  setSize()
+  startGame()
 }
 
 function setSize() {
-  var screen = document.getElementById( 'screen' );
+  let screen = document.getElementById( 'screen' );
   screen.width = window.innerWidth
   screen.height = window.innerHeight
 
@@ -51,96 +56,112 @@ function setSize() {
   } else {
     board.widthMargin = board.heightMargin = window.innerHeight * 0.05;
   }
+
+  _2d.fillStyle = backgroundColor
+  _2d.fillRect( board.widthMargin, board.heightMargin,
+    window.innerWidth - board.widthMargin * 2, window.innerHeight - board.heightMargin * 2 )
 }
 
 function randomNibble() {
-  var nibble = board.nibble = v2( RNDM_RG( 0, board.gridSize ), RNDM_RG( 0, board.gridSize ) );
-  var nibblePosition = v2( nibble.x * ( board.cubeSize + board.innerPadding ), nibble.y * ( board.cubeSize + board.innerPadding ) )
+  let nibble = board.nibble = v2( RNDM_RG( 0, board.gridSize ), RNDM_RG( 0, board.gridSize ) )
 
-  var collisionFree = !snake.some( function ( pos ) {
+  let collision = snake.some( pos => {
     return pos.x === nibble.x && pos.y === nibble.y
   })
 
-  if ( collisionFree ) {
-    _2d.fillStyle = '#000000'
-    _2d.fillRect( board.widthMargin + nibblePosition.x + board.innerPadding, board.heightMargin + nibblePosition.y + board.innerPadding, board.cubeSize, board.cubeSize )
-  } else {
-    randomNibble()
-  }
+  collision ? randomNibble() : drawNibble()
+}
+
+function drawNibble() {
+  let nibblePosition = v2( board.nibble.x * ( board.cubeSize + board.innerPadding ), board.nibble.y * ( board.cubeSize + board.innerPadding ) )
+
+  _2d.fillStyle = nibbleColor
+  _2d.fillRect( board.widthMargin + nibblePosition.x + board.innerPadding, board.heightMargin + nibblePosition.y + board.innerPadding, board.cubeSize, board.cubeSize )
+}
+
+function drawSnake() {
+  snake.forEach( function ( coords ) {
+    let nextTilePosition = v2( coords.x * ( board.cubeSize + board.innerPadding ), coords.y * ( board.cubeSize + board.innerPadding ) )
+
+    _2d.fillStyle = snakeColor
+    _2d.fillRect( board.widthMargin + nextTilePosition.x + board.innerPadding, board.heightMargin + nextTilePosition.y + board.innerPadding, board.cubeSize, board.cubeSize )
+  })
 }
 
 function startGame() {
-  var center = v2( Math.ceil(board.gridSize / 2), Math.ceil(board.gridSize / 2) );
-
-  if ( !snake ) {
-    direction = [ v2(1,0), v2(-1,0), v2(0,1), v2(0,-1) ][RNDM_RG(0, 3)];
-    snake = [ v2Add( center, direction ), center, v2Sub( center, direction ) ];
-
-    _2d.fillStyle = '#b4bbfa'
-    _2d.fillRect( board.widthMargin, board.heightMargin,
-      window.innerWidth - board.widthMargin * 2, window.innerHeight - board.heightMargin * 2 )
-
-    randomNibble();
-
-    snake.forEach( function ( coords ) {
-      var nextTilePosition = v2( coords.x * ( board.cubeSize + board.innerPadding ), coords.y * ( board.cubeSize + board.innerPadding ) )
-
-      _2d.fillStyle = '#2d32a4'
-      _2d.fillRect( board.widthMargin + nextTilePosition.x + board.innerPadding, board.heightMargin + nextTilePosition.y + board.innerPadding, board.cubeSize, board.cubeSize )
-    })
-
-    board.currentGame = setInterval( update, 300 )
-  } else {
+  // Handle pausing
+  if ( snake ) {
     if ( board.currentGame ) {
       clearInterval( board.currentGame )
       board.currentGame = null
     } else {
       board.currentGame = setInterval( update, 300 )
     }
+    return
   }
 
-  // Draw the base snake here
+  // Game setup
+  let center = v2( Math.ceil(board.gridSize / 2), Math.ceil(board.gridSize / 2) );
+
+  // Draw the background
+  _2d.fillStyle = backgroundColor
+  _2d.fillRect( board.widthMargin, board.heightMargin,
+    window.innerWidth - board.widthMargin * 2, window.innerHeight - board.heightMargin * 2 )
+
+  // Create and draw the snake
+  direction = [ v2(1,0), v2(-1,0), v2(0,1), v2(0,-1) ][RNDM_RG(0, 3)];
+  snake = [ v2Add( center, direction ), center, v2Sub( center, direction ) ];
+  drawSnake()
+
+  // Draw the nibble
+  randomNibble()
 }
 
 function update() {
-  if ( !snake.fed ) {
-    var oldTile = snake.pop();
-    var oldTilePosition = v2( oldTile.x * ( board.cubeSize + board.innerPadding ), oldTile.y * ( board.cubeSize + board.innerPadding ) );
-    _2d.fillStyle = '#b4bbfa'
-    _2d.fillRect( board.widthMargin + oldTilePosition.x + board.innerPadding - 1, board.heightMargin + oldTilePosition.y + board.innerPadding - 1,
-      board.cubeSize + 2, board.cubeSize + 2 )
-  } else snake.fed = false
+  // Add the direction magnitude to the snakes head to determine the next tile
+  // position logically and on the screen.
+  let nextTile = v2Add( snake[0], direction );
+  let nextTilePosition = v2( nextTile.x * ( board.cubeSize + board.innerPadding ), nextTile.y * ( board.cubeSize + board.innerPadding ) )
+  let ateTheNibble = false;
 
-  var nextTile = v2Add( snake[0], direction );
-  var nextTilePosition = v2( nextTile.x * ( board.cubeSize + board.innerPadding ), nextTile.y * ( board.cubeSize + board.innerPadding ) )
+  // If the snakes head is on the nibble, don't draw over the tail for one
+  // frame, so that it will be one tile longer. If we didn't eat the nibble, we
+  // want to pop the tail off so that we don't report overlap when there shouldn't
+  // actually be any.
+  if ( nextTile.x === board.nibble.x && nextTile.y === board.nibble.y ) {
+    ateTheNibble = true
+  } else {
+    let oldTile = snake.pop();
+    let oldTilePosition = v2( oldTile.x * ( board.cubeSize + board.innerPadding ), oldTile.y * ( board.cubeSize + board.innerPadding ) );
+    _2d.fillStyle = backgroundColor
+    _2d.fillRect( board.widthMargin + oldTilePosition.x + board.innerPadding - 2, board.heightMargin + oldTilePosition.y + board.innerPadding - 2,
+      board.cubeSize + 4, board.cubeSize + 4 )
+  }
 
-  var masturbating = snake.some( function ( coords ) {
-    return coords.x === nextTile.x && coords.y === nextTile.y
-  })
-
-  if ( nextTile.x > board.gridSize || nextTile.x < 0 || nextTile.y > board.gridSize || nextTile.y < 0 || masturbating ) {
+  // If the head will be touching any other pieces once it moves..
+  let overlap = snake.some( coords => coords.x === nextTile.x && coords.y === nextTile.y )
+  // ..or if you went over the edge, then you died! Restarting!
+  if ( nextTile.x > board.gridSize || nextTile.x < 0 || nextTile.y > board.gridSize || nextTile.y < 0 || overlap ) {
     clearInterval( board.currentGame )
     snake = board.currentGame = null
 
-    startGame()
-    return false
+    return startGame()
   }
 
+  // We didn't die, so move the snake and draw the head
   snake.unshift( nextTile )
-
-  if ( nextTile.x === board.nibble.x && nextTile.y === board.nibble.y ) {
-    snake.fed = true
-    randomNibble()
-  }
-
-  _2d.fillStyle = '#2d32a4'
+  _2d.fillStyle = snakeColor
   _2d.fillRect( board.widthMargin + nextTilePosition.x + board.innerPadding, board.heightMargin + nextTilePosition.y + board.innerPadding, board.cubeSize, board.cubeSize )
-  return true
+
+  // Now that the snakes collision map is finalized for the frame, we can
+  // safely place the nibble.
+  if ( ateTheNibble ) randomNibble()
 }
 
 function immediateUpdate() {
   clearInterval( board.currentGame )
-  if ( update() ) board.currentGame = setInterval( update, 300 )
+  update()
+  board.currentGame = setInterval( update, 300 )
 }
 
 function space() {
@@ -168,9 +189,14 @@ function right() {
 }
 
 window.addEventListener( 'DOMContentLoaded', setup )
-window.addEventListener( 'resize', setSize )
+window.addEventListener( 'click', startGame )
+window.addEventListener( 'resize', () => {
+  setSize()
+  drawSnake()
+  drawNibble()
+})
 
-window.addEventListener( 'keydown', function ( key ) {
+window.addEventListener( 'keydown', key => {
   switch ( key.keyCode ) {
     case 32: space(); break;
     case 65:

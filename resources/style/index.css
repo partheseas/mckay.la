@@ -52,3 +52,7 @@ li a:hover {
   margin: 0 0 0 1.15in;
 	font-size: 0.8em;
 }
+
+#slim-footer a {
+  color: white;
+}
