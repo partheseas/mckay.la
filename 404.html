@@ -19,16 +19,16 @@
     document.getElementById( "message" ).innerHTML = MESSAGE += ["c","'(","(","[","\\","/"][RNDM_RG(0,5)]
 
     setInterval( function () {
-      r += RNDM_RG(-1,1)
-      g += RNDM_RG(-1,1)
-      b += RNDM_RG(-1,1)
+      r += RNDM_RG(-2,2)
+      g += RNDM_RG(-2,2)
+      b += RNDM_RG(-2,2)
 
       r = Math.min( Math.max( r, 0 ), 255)
       g = Math.min( Math.max( g, 0 ), 255)
       b = Math.min( Math.max( b, 0 ), 255)
 
       document.body.style.backgroundColor = "#" + r.toString(16) + g.toString(16) + b.toString(16)
-    }, 17 )
+    }, 50 )
   })
 
   window.addEventListener( "resize", function () {
