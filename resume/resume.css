@@ -127,6 +127,11 @@ table td:first-child {
   padding: 0 2em 0 0;
 }
 
+table td p {
+  margin: 0;
+  padding: 0;
+}
+
 p {
   margin: 0.5em 0 1em 0;
 }
