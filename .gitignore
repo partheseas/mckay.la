@@ -1,2 +1,4 @@
 .DS_Store
 dist
+resources/video
+lab/websocket

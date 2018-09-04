@@ -88,7 +88,7 @@ span.location, span.date {
 }
 
 span.location::before {
-  content: " — ";
+  content: " \2014  ";
 }
 
 span.date::before {
