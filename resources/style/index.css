@@ -56,3 +56,11 @@ li a:hover {
 #slim-footer a {
   color: white;
 }
+
+#hidden {
+  display: none;
+}
+
+#hidden li a:hover {
+  background-color: rgba(231, 240, 74, 1);
+}

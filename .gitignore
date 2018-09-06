@@ -1,4 +1,12 @@
 .DS_Store
 dist
 resources/video
+
+lab/database
+lab/graph
+lab/grid
+lab/promises
+lab/sudoku
 lab/websocket
+lab/windows
+lab/wpcanvas

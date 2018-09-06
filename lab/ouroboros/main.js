@@ -209,3 +209,32 @@ window.addEventListener( 'keydown', key => {
     case 40: down();  break;
   }
 })
+
+let initialX = null
+let initialY = null
+
+window.addEventListener( 'touchstart', touch => {
+  initialX = touch.touches[0].clientX
+  initialY = touch.touches[0].clientY
+
+  touch.preventDefault()
+  return false
+})
+
+window.addEventListener( 'touchend', touch => {
+  let diffX = touch.changedTouches[0].clientX - initialX
+  let diffY = touch.changedTouches[0].clientY - initialY
+
+  if ( Math.abs( diffX ) > Math.abs( diffY ) ) {
+    if ( diffX > 50 ) right()
+    else if ( diffX < -50 ) left()
+    else space()
+  } else {
+    if ( diffY > 50 ) down()
+    else if ( diffY < -50 ) up()
+    else space()
+  }
+
+  touch.preventDefault()
+  return false
+})
