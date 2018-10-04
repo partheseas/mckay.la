@@ -8,11 +8,11 @@ html, body {
 section {
   display: grid;
 
-  grid-template-rows: 2fr 1fr;
+  grid-template-rows: 1fr auto;
   grid-template-columns: auto;
   grid-template-areas: "display" "content";
 
-  height: 100%;
+  min-height: 100%;
 
   box-shadow: 0 0 100px black;
 
@@ -21,7 +21,6 @@ section {
   background-repeat: no-repeat;
 
   padding: 0;
-  overflow: scroll;
 
   font-size: 1.45em;
 }
@@ -34,13 +33,13 @@ section h1 {
 @media screen and (min-width: 800px) and (min-height: 700px) and (orientation: landscape) {
   section:nth-child(odd) {
     grid-template-rows: auto;
-    grid-template-columns: auto 5.5in;
+    grid-template-columns: auto 6in;
     grid-template-areas: "display content";
   }
 
   section:nth-child(even) {
     grid-template-rows: auto;
-    grid-template-columns: 5.5in auto;
+    grid-template-columns: 6in auto;
     grid-template-areas: "content display";
   }
 
