@@ -8,19 +8,73 @@ html, body {
   height: 100%;
 }
 
+div, section, img {
+  display: block;
+
+  margin: 0;
+  padding: 0.15in;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  display: block;
+
+  margin: 0;
+  padding: 0.1in;
+}
+
 input:focus, textarea:focus, button:focus {
   outline: none;
 }
 
+textarea, input[type="text"], input[type="password"] {
+  display: block;
+
+  padding: 0.15in;
+  margin: 0.1in;
+
+  color: inherit;
+
+  background-color: rgba( 240, 240, 240, 0.5 );
+
+  font-size: 0.15in;
+}
+
+button, input[type="button"] {
+  background-color: transparent;
+  background-image: linear-gradient( 0deg, rgba( 190, 215, 195, 0.5 ), rgba( 200, 235, 255, 0.5 ) );
+  border: 1px solid rgba( 120, 120, 125, 0.5 );
+  border-radius: 4px;
+
+  font-size: 0.9em;
+
+  color: inherit;
+
+  padding: 0.15in;
+  margin: 0.1in;
+
+  transition: box-shadow 100ms ease;
+}
+
+button:hover, input[type="button"]:hover {
+  box-shadow: 0 0 0.3in rgba( 127, 127, 127, 0.5 );
+  transform: translate( 0, -1px );
+}
+
+button:active, input[type="button"]:active {
+  background-color: rgba( 180, 235, 255, 0.5 );
+  background-image: none;
+  box-shadow: 0 0 0.3in rgba( 180, 180, 180, 0.8 );
+  transform: translate( 0, 1px );
+}
+
 ol, ul {
   list-style-type: none;
-  padding: 0;
+  padding: 0.1in;
   margin: 0;
 }
 
 li {
-  padding: 0;
-  margin: 0;
+  padding: 0.1in;
 }
 
 li * {
@@ -29,29 +83,42 @@ li * {
 }
 
 a {
+  display: inline-block;
+
   text-decoration: none;
-  color: black;
+  color: inherit;
+
+  margin: 0;
+  padding: 0.02in;
+
+  transition: transform 100ms ease;
 }
 
 a:hover {
   text-decoration: underline;
+  transform: translate( 0, -2px );
 }
 
-.shadow {
-  box-shadow: 2px 2px 15px #131313;
+a:active {
+  transform: translate( 0, 0 );
 }
 
-::-webkit-scrollbar {
-  background-color: transparent;
-  width: 5px;
-  height: 5px;
+input[type="checkbox"], input[type="radio"] {
+  -webkit-appearance: initial;
 }
 
-::-webkit-scrollbar-corner {
-  background-color: transparent;
+input[type="checkbox"]::after, input[type="radio"]::after {
+  content: "";
+
+  display: inline-block;
+
+  background-color: rgba( 240, 240, 240, 0.5 );
+  border: 1px solid black;
+
+  width: 20px;
+  height: 20px;
 }
 
-::-webkit-scrollbar-thumb {
-  background-color: white;
-  border-radius: 2px;
+input[type="checkbox"]:checked::after, input[type="radio"]:checked::after {
+  background-color: rgba( 130, 130, 130, 0.5 );
 }
