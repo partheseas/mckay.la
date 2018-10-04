@@ -66,12 +66,14 @@ section h1 {
 
 #hobbies {
   background-image: url('/resources/images/tree.jpg');
-  font-size: 1.25em;
 }
 
 #work {
   background-image: url('/resources/images/river.jpg');
-  font-size: 1.1em;
+}
+
+#hobbies h2~*, #work h2~*{
+  font-size: 0.85em;
 }
 
 #credits {
