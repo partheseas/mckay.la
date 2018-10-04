@@ -62,7 +62,7 @@ h4 {
   margin: 0;
 }
 
-/* .inset {
+.inset {
   padding: 0.2em 1em;
   margin: 1em 0;
 
@@ -81,7 +81,7 @@ h4 {
 
 #uvu {
   background-color: rgba( 44, 181, 27, 0.3 );
-} */
+}
 
 span.location, span.date {
   font-weight: normal;
@@ -115,7 +115,7 @@ body section:first-child p {
 ul {
   list-style-type: none;
   margin: 0;
-  padding: 0 0 0 10.3em;
+  padding: 0;
 }
 
 ul li {
