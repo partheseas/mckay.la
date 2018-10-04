@@ -22,10 +22,7 @@ $( document ).ready( () => {
 })
 
 $( document ).scroll( () => {
-  if ( panel === null ) {
-    setPanelValue()
-    previousFrameSize = window.innerHeight
-  }
+  setPanelValue()
 
   if ( !autoScrolling && window.innerHeight === previousFrameSize ) {
     if ( window.scrollY > panel * window.innerHeight + 100 ) {
@@ -36,7 +33,6 @@ $( document ).scroll( () => {
   }
 
   previousFrameSize = window.innerHeight
-  setPanelValue()
 })
 
 $( window ).resize( () => {

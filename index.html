@@ -3,13 +3,13 @@
 <head>
   <title>McKayla</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=0.75, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=0.6, user-scalable=no" />
 
   <link rel="stylesheet" type="text/css" href="/resources/style/prelude.css" />
   <link rel="stylesheet" type="text/css" href="/resources/style/fonts.css" />
   <link rel="stylesheet" type="text/css" href="/resources/style/index.css" />
 
-  <script type="application/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script type="application/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
   <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
   <script type="application/javascript" src="/resources/index.js"></script>
@@ -17,16 +17,16 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
 </head>
 <body>
-  <section id="title" >
-    <div id="nav">
+  <section id="title">
+    <div id="nav" class="page-display">
       <ul>
-        <li class="hidden"><a href="lab/ouroboros">Ouroboros</a></li>
-        <li class="hidden"><a href="lab/dangerous">Dangerous</a></li>
+        <li><a href="lab/ouroboros">Ouroboros</a></li>
+        <li><a href="lab/dangerous">Dangerous</a></li>
       </ul>
 
       <div id="slim-footer">
         &copy; 2018 &hearts; McKayla
-        &middot; <a href="credits.html">Credits</a>
+        &middot; <a href="#credits">Credits</a>
         <span class="hidden">
           &middot; <a href="https://github.com/partheseas/mckay.la">Source</a>
         </span>
@@ -45,8 +45,8 @@
         and <strong style="color: #2f6c1c">Node.js</strong>.</p>
       <p>I create websites using various tools, such as <strong style="color: #23568a">jQuery</strong>,
         <strong style="color: #38b8e6">React</strong>, <strong style="color: #b85b8a">Sass</strong>,
-        <strong style="color: #c1504c">Pulp</strong> and custom libraries that I've written on my own.</p>
-      <p>I use <strong style="color: #80afbb">Electron </strong> to create desktop applications.</p>
+        <strong style="color: #c1504c">Pulp</strong> and other custom tools that I've created on my own.</p>
+      <p>I use <strong style="color: #80afbb">Electron</strong> to create desktop applications.</p>
     </div>
   </section>
   <section id="education">
@@ -54,7 +54,7 @@
       <h2>Education</h2>
       <p>I study Computer Science and Networking at UVU. I'm just short of half way
         through my bachelor degree with a 3.5 GPA. I will be helping plan curriculum
-        for a Node focused JavaScript class that UVU will soon begin teaching.</p>
+        for a Node.js focused JavaScript class that UVU will soon begin teaching.</p>
       <p>I started studying computers and web development when I was in
         7th grade. The most interesting capability of technology has always been
         its ability to extend and enable communications of all kinds, and having
@@ -62,10 +62,21 @@
     </div>
   </section>
   <section id="hobbies" >
+    <div class="page-display">
+      <ul>
+        <li><a href="https://github.com/weave-js/weave">Weave</a></li>
+        <li><a href="https://github.com/partheseas/gardens">Gardens</a></li>
+        <li><a href="https://github.com/partheseas/oui">Oui</a></li>
+        <li><a href="https://github.com/partheseas">GitHub</a></li>
+      </ul>
+      <ul>
+        <li><a href="https://instagram.com/partheseas">Instagram</a></li>
+      </ul>
+    </div>
     <div class="page-content">
       <h2>Hobbies</h2>
       <p>I spend a lot of time working on hobby projects. Most of them are written
-        for Node, because the wide variety of packages available and creature comforts
+        for Node.js, because the wide variety of packages available and creature comforts
         of JavaScript enable quick iteration on prototype implementations.</p>
       <p>You can see some of my open source work on my <a href="https://github.com/partheseas">GitHub</a>.</p>
       <ul>
@@ -107,9 +118,23 @@
       </div>
     </div>
   </section>
-  <section id="lolwut" class="bottom-container">
+  <section id="credits" class="bottom-container">
     <div class="page-content">
-      <h2>Sour Skittles</h2>
+      <h2>Credits</h2>
+      <h3>Programming</h3>
+      <p>I hand crafted this website from scratch in about 6 hours.</p>
+
+      <h3>Resources</h3>
+      <p>jQuery (MIT) provided by the jQuery foundation</p>
+      <p>Fonts provided by fonts.google.com</p>
+      <p>Photograph of UVU provided by UVU</p>
+      <p>Blue Mountain graphic provided by The Verge</p>
+      <p>Giraffe Bookmark Icon (CC) provided by The Noun Project</p>
+      <p>All imagery not mentioned above provided by myself.</p>
+
+      <h3>Hosting</h3>
+      <p>GitHub Pages</p>
+      <p>Cloudflare</p>
     </div>
   </section>
 </body>
