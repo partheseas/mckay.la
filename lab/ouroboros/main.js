@@ -80,7 +80,7 @@ function drawNibble() {
 }
 
 function drawSnake() {
-  snake.forEach( function ( coords ) {
+  snake.forEach( coords => {
     let nextTilePosition = v2( coords.x * ( board.cubeSize + board.innerPadding ), coords.y * ( board.cubeSize + board.innerPadding ) )
 
     _2d.fillStyle = snakeColor

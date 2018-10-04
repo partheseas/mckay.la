@@ -2,11 +2,15 @@
 dist
 resources/video
 
+lab/browserify
 lab/database
 lab/graph
 lab/grid
+lab/invading
+lab/prelude-test
 lab/promises
 lab/sudoku
 lab/websocket
 lab/windows
 lab/wpcanvas
+lab/wzcanvas
