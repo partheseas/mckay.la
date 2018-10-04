@@ -1,7 +1,7 @@
 // This variable is used to fix the terrible awful way that iOS handles
 // the shrinking address bar when you scroll down on a page.
 let mobile = navigator.userAgent.toLowerCase().includes( 'mobile' )
-let wideEnough = window.innerWidth > 800
+let wideEnough = window.innerWidth > 1000
 let autoScrolling = false
 let panel = null
 
@@ -36,7 +36,7 @@ if ( !mobile ) {
   })
 
   $( window ).resize( () => {
-    wideEnough = window.innerWidth > 800
+    wideEnough = window.innerWidth > 1000
     if ( Math.abs( window.scrollY - panel * window.innerHeight ) > 100 ) {
       startAutoScrolling( panel )
     }
