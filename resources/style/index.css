@@ -27,6 +27,14 @@ section {
 
 section h1 {
   font-family: brush;
+}
+
+.page-display h1 {
+  font-size: 3em;
+  color: white;
+}
+
+.page-content h1 {
   font-size: 5em;
 }
 

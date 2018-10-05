@@ -1,9 +1,19 @@
-// This variable is used to fix the terrible awful way that iOS handles
-// the shrinking address bar when you scroll down on a page.
 let mobile = navigator.userAgent.toLowerCase().includes( 'mobile' )
 let wideEnough = window.innerWidth > 1000
 let autoScrolling = false
 let panel = null
+
+function setPanelValue() {
+  panel = Math.round( window.scrollY / window.innerHeight )
+}
+
+function startAutoScrolling( toPanel ) {
+  autoScrolling = true
+  $( window ).scrollTo( toPanel * window.innerHeight, 1000, { easing: 'easeOutExpo', onAfter: () => {
+    setPanelValue()
+    setTimeout( () => autoScrolling = false, 100 )
+  }} )
+}
 
 if ( !mobile ) {
   $( document ).ready( () => {
@@ -43,14 +53,37 @@ if ( !mobile ) {
   })
 }
 
-function setPanelValue() {
-  panel = Math.round( window.scrollY / window.innerHeight )
-}
+// # Hello there!
+// If you're looking at this and wondering what it does, it's a
+// simple hashing algorithm of sorts. Probably not crazy secure,
+// and also total overkill for what it accomplishes, but it was
+// just kind of fun to write. If you're curious about the code I
+// use for the automatic/locking scrolling from the desktop version
+// of the website, all of that code is above.
+//
+// All this does is load a script that changes things a little bit
+// when I visit this webpage from my development server. If you manage
+// to crack the password, it won't do anything because the script that
+// this loads is not available on the public website.
 
-function startAutoScrolling( toPanel ) {
-  autoScrolling = true
-  $( window ).scrollTo( toPanel * window.innerHeight, 1000, { easing: 'easeOutExpo', onAfter: () => {
-    setPanelValue()
-    setTimeout( () => autoScrolling = false, 100 )
-  }} )
+if ( localStorage.dev ) {
+  let key = localStorage.token
+  let running = 1
+  let ent = parseInt( key[ key.length - 1 ], 36 )
+  let current
+
+  for ( position in key ) {
+    current = parseInt( key[ position ], 36 )
+    running *= current ** ent
+    ent = current
+
+    running %= 0xFFFF
+  }
+
+  if ( running === 0xc3b4 ) {
+    let secret = document.createElement( 'script' )
+    secret.type = 'application/javascript'
+    secret.src = `/lab/dev/${key}.js`
+    document.head.appendChild( secret )
+  }
 }
