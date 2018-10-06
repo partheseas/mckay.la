@@ -27,7 +27,7 @@ function hash( digest ) {
   return running
 }
 
-if ( localStorage.dev ) {
+if ( localStorage.token ) {
   let key = localStorage.token
 
   if ( hash( key ) === 0xc3b4 ) {
