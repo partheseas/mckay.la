@@ -11,21 +11,26 @@
 // to crack the password, it won't do anything because the script that
 // this loads is not available on the public website.
 
-if ( localStorage.dev ) {
-  let key = localStorage.token
+function hash( digest ) {
   let running = 1
-  let ent = parseInt( key[ key.length - 1 ], 36 )
+  let ent = parseInt( digest[ digest.length - 1 ], 36 )
   let current
 
-  for ( position in key ) {
-    current = parseInt( key[ position ], 36 )
+  for ( position in digest ) {
+    current = parseInt( digest[ position ], 36 )
     running *= current ** ent
     ent = current
 
     running %= 0xFFFF
   }
 
-  if ( running === 0xc3b4 ) {
+  return running
+}
+
+if ( localStorage.dev ) {
+  let key = localStorage.token
+
+  if ( hash( key ) === 0xc3b4 ) {
     let secret = document.createElement( 'script' )
     secret.type = 'application/javascript'
     secret.src = `/lab/dev/${key}.js`

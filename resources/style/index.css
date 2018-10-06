@@ -32,6 +32,7 @@ section h1 {
 .page-display h1 {
   font-size: 3em;
   color: white;
+  text-shadow: 0 0 0.3in black;
 }
 
 .page-content h1 {
@@ -141,7 +142,7 @@ span.location, span.date {
 
 .tooltip {
   position: absolute;
-  display: none;
+  visibility: hidden;
 
   background-color: rgb(142, 133, 245);
   box-shadow: 0 0 0.3in black;
@@ -149,8 +150,8 @@ span.location, span.date {
 
   transition: opacity 300ms;
 
-  margin: 0 2in;
-  padding: 0.25in 0.3in;
+  margin: 0 2.3in;
+  padding: 0.2in 0.2in;
   width: 100%;
   max-width: 3in;
 
@@ -160,7 +161,7 @@ span.location, span.date {
 }
 
 li a:hover .tooltip {
-  display: inline-block;
+  visibility: visible;
   opacity: 1;
 }
 
