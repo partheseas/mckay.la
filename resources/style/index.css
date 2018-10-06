@@ -160,7 +160,7 @@ span.location, span.date {
   opacity: 0;
 }
 
-li a:hover .tooltip {
+a:hover .tooltip {
   visibility: visible;
   opacity: 1;
 }
