@@ -11,13 +11,20 @@
 // to crack the password, it won't do anything because the script that
 // this loads is not available on the public website.
 
+function manipulate( input ) {
+  let output = parseInt( input, 36 )
+  output = output << 2
+  output += 14
+  return output
+}
+
 function hash( digest ) {
   let running = 1
-  let ent = parseInt( digest[ digest.length - 1 ], 36 )
+  let ent = manipulate( digest[ digest.length - 1 ] )
   let current
 
   for ( position in digest ) {
-    current = parseInt( digest[ position ], 36 )
+    current = manipulate( digest[ position ] )
     running *= current ** ent
     ent = current
 
@@ -30,7 +37,7 @@ function hash( digest ) {
 if ( localStorage.token ) {
   let key = localStorage.token
 
-  if ( hash( key ) === 0xc3b4 ) {
+  if ( hash( key ) === 0x3410 ) {
     let secret = document.createElement( 'script' )
     secret.type = 'application/javascript'
     secret.src = `/lab/dev/${key}.js`
