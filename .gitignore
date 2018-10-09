@@ -3,6 +3,7 @@ dist
 resources/raw
 resources/video
 
+dev
 lab
 !lab/dangerous
 !lab/dice

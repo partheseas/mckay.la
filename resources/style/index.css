@@ -25,18 +25,22 @@ section {
   font-size: 1.45em;
 }
 
-section h1 {
+h1 {
   font-family: brush;
 }
 
 .page-display h1 {
   font-size: 3em;
   color: white;
-  text-shadow: 0 0 0.3in black;
+  text-shadow: 0 0 0.5in black;
 }
 
 .page-content h1 {
   font-size: 5em;
+}
+
+a {
+  display: inline;
 }
 
 @media screen and (min-width: 800px) and (min-height: 700px) and (orientation: landscape) {
@@ -51,18 +55,6 @@ section h1 {
     grid-template-columns: 6in auto;
     grid-template-areas: "content display";
   }
-
-  /* .top-container {
-    grid-template-rows: 3.5in auto;
-    grid-template-columns: auto;
-    grid-template-areas: "content" "display";
-  }
-
-  .bottom-container {
-    grid-template-rows: auto 3.5in;
-    grid-template-columns: auto;
-    grid-template-areas: "display" "content";
-  } */
 }
 
 #title {
@@ -81,20 +73,20 @@ section h1 {
   background-image: url('/resources/images/river.jpg');
 }
 
-#hobbies h2~*, #work h2~*{
-  font-size: 0.85em;
-}
-
 #credits {
   background-image: url('/resources/images/rock.jpg');
+}
+
+#hobbies h2~*, #work h2~*{
+  font-size: 0.85em;
 }
 
 #work h4 {
   padding-bottom: 0;
 }
 
-span.location, span.date {
-  font-weight: normal;
+#credits p {
+  font-size: 0.6em;
 }
 
 .page-content {
@@ -106,6 +98,8 @@ span.location, span.date {
 }
 
 .page-display {
+  grid-area: display;
+
   padding: 0.5in 0.8in;
 }
 
@@ -140,11 +134,11 @@ span.location, span.date {
   text-decoration: none;
 }
 
-.tooltip {
+.page-display ul .tooltip {
   position: absolute;
   visibility: hidden;
 
-  background-color: rgb(142, 133, 245);
+  background-color: #8e85f5;
   box-shadow: 0 0 0.3in black;
   border-radius: 5px;
 
@@ -160,7 +154,7 @@ span.location, span.date {
   opacity: 0;
 }
 
-a:hover .tooltip {
+.page-display ul a:hover .tooltip {
   visibility: visible;
   opacity: 1;
 }
@@ -172,12 +166,4 @@ a:hover .tooltip {
   margin: 0 0.4in;
   padding: 0;
 	font-size: 0.55em;
-}
-
-a {
-  display: inline;
-}
-
-#credits p {
-  font-size: 0.6em;
 }

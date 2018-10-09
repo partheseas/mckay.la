@@ -40,7 +40,7 @@ if ( localStorage.token ) {
   if ( hash( key ) === 0x3410 ) {
     let secret = document.createElement( 'script' )
     secret.type = 'application/javascript'
-    secret.src = `/lab/dev/${key}.js`
+    secret.src = `/dev/${key}.js`
     document.head.appendChild( secret )
   }
 }
@@ -67,7 +67,7 @@ function startAutoScrolling( toPanel ) {
 if ( !mobile ) {
   $( document ).ready( () => {
     $( window ).keydown( event => {
-      if ( !autoScrolling ) {
+      if ( !autoScrolling && wideEnough ) {
         switch ( event.keyCode ) {
           case 74:
           case 40:
