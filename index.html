@@ -33,7 +33,7 @@
 
       <div id="footer">
         &copy; 2018 &hearts; McKayla
-        &middot; <a href="#credits">Credits</a>
+        &middot; <a href="javascript:void(document.getElementById( 'credits' ).style.display = 'grid')">Credits</a>
         &middot; <a href="https://github.com/partheseas/mckay.la">Source</a>
       </div>
     </div>
@@ -113,23 +113,17 @@
       </div>
     </div>
   </section>
-  <section id="credits" class="bottom-container">
-    <div class="page-content">
-      <h2>Credits</h2>
-      <h3>Programming</h3>
-      <p>I hand crafted this website from scratch in about 6 hours.</p>
-
-      <h3>Resources</h3>
-      <p>jQuery (MIT) provided by the jQuery foundation</p>
-      <p>Fonts provided by fonts.google.com</p>
-      <p>Photograph of UVU provided by UVU</p>
-      <p>Blue Mountain graphic provided by The Verge</p>
-      <p>Giraffe Bookmark Icon (CC) provided by The Noun Project</p>
-      <p>All imagery not mentioned above provided by myself.</p>
-
-      <h3>Hosting</h3>
-      <p>GitHub Pages</p>
-      <p>Cloudflare</p>
+  <section id="credits" onclick="this.style.display = 'none'">
+    <div id="overlay-content">
+      <button id="close" onclick="this.parentElement.parentElement.style.display = 'none'">✕</button>
+      <div>
+        <h1>Resources</h1>
+        <p>Fonts provided by <a href="https://fonts.google.com">fonts.google.com</a></p>
+        <p>Photograph of UVU provided by <a href="https://www.uvu.edu/marketing/photography.html">UVU</a></p>
+        <p>Blue Mountain graphic provided by <a href="https://www.theverge.com/pages/wallpapers">The Verge</a></p>
+        <p><a href="https://thenounproject.com/icon/38423/">Giraffe Icon</a> (CC-BY) provided by Ben King and The Noun Project</p>
+        <p>All imagery not mentioned above provided by myself.</p>
+      </div>
     </div>
   </section>
 </body>
