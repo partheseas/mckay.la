@@ -1,9 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Roboto+Mono:300,300i,400,400i,500,500i,700,700i|Roboto+Slab:100,300,400,700');
+
+@font-face {
+  font-family: brush;
+  src: url('../fonts/brush.ttf');
+}
+
+@font-face {
+  font-family: m1;
+  src: url('../fonts/mplus-1m-light.ttf');
+}
+
 html, body {
+  box-sizing: border-box;
+
   margin: 0;
   padding: 0;
 
   width: 100%;
   height: 100%;
+
+  font-family: montserrat;
 }
 
 div, section, img {
@@ -20,49 +36,69 @@ h1, h2, h3, h4, h5, h6, p {
   padding: 0.1in;
 }
 
-input:focus, textarea:focus, button:focus {
+input, textarea, button, select {
+  font-family: inherit;
+}
+
+input:focus, textarea:focus, button:focus, select:focus {
   outline: none;
 }
 
 textarea, input[type="text"], input[type="password"] {
-  display: block;
+  display: inline-block;
 
-  padding: 0.15in;
+  padding: 0.1in;
   margin: 0.1in;
+  margin-right: 0;
 
   color: inherit;
 
   background-color: rgba( 240, 240, 240, 0.5 );
 
   font-size: 0.15in;
+
+  border: 1px solid black;
 }
 
-button, input[type="button"] {
+button, input[type="button"], input[type="submit"], input[type="file"], input[type="photo"], select {
+  display: inline-block;
+
   background-color: transparent;
   background-image: linear-gradient( 0deg, rgba( 190, 215, 195, 0.5 ), rgba( 200, 235, 255, 0.5 ) );
   border: 1px solid rgba( 120, 120, 125, 0.5 );
   border-radius: 4px;
 
-  font-size: 0.9em;
+  font-size: 11pt;
 
   color: inherit;
 
-  padding: 0.15in;
+  padding: 0.1in;
   margin: 0.1in;
+  margin-right: 0;
 
   transition: box-shadow 100ms ease;
+
+  cursor: pointer;
 }
 
-button:hover, input[type="button"]:hover {
-  box-shadow: 0 0 0.3in rgba( 127, 127, 127, 0.5 );
-  transform: translate( 0, -1px );
+select {
+  background-image: linear-gradient( 0deg, rgba( 190, 215, 195, 0.5 ), rgba( 200, 235, 255, 0.5 ) );
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  font-size: 11pt;
+  padding: 0.1in;
+  margin: 0.1in;
+
+  height: 0.4in;
 }
 
-button:active, input[type="button"]:active {
+button:active, input[type="button"]:active, input[type="submit"]:active {
   background-color: rgba( 180, 235, 255, 0.5 );
   background-image: none;
-  box-shadow: 0 0 0.3in rgba( 180, 180, 180, 0.8 );
-  transform: translate( 0, 1px );
+  transform: translate( 0, 2px );
 }
 
 ol, ul {
@@ -94,11 +130,10 @@ a {
 
 a:hover {
   text-decoration: underline;
-  transform: translate( 0, -2px );
 }
 
 a:active {
-  transform: translate( 0, 0 );
+  transform: translate( 0, 2px );
 }
 
 input[type="checkbox"], input[type="radio"] {
