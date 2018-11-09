@@ -1,11 +1,17 @@
+# macOS
 .DS_Store
+
+# Exclude various large resources...
 dist
 resources/raw
 resources/user-content
 resources/video
 
+# ...and other things that are only relevant to me
 dev
 lab
+
+# Except for a few things I want to share
 !lab/dangerous
 !lab/dice
 !lab/ouroboros
