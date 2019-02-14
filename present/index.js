@@ -109,7 +109,7 @@ $( document ).ready( () => {
     }
   })
 
-  $( '#presentation' ).click( () => {
+  $( '#presentation' ).dblclick( () => {
     if ( !autoScrolling && wideEnough ) {
       switch ( event.keyCode ) {
         case 74:
