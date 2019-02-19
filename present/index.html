@@ -7,6 +7,25 @@
 
     <link rel="stylesheet" type="text/css" href="/resources/oui/oui.css" />
     <link rel="stylesheet" type="text/css" href="index.css" />
+
+    <script type="application/javascript">
+      let things = ['Adventurous', 'Independent']
+      let thing = 0;
+      let place = null;
+
+      window.addEventListener( 'DOMContentLoaded', () => {
+        place = document.getElementById( 'box' )
+      })
+
+      window.addEventListener( 'keyup', key => {
+        console.log( key.keyCode )
+        if ( key.keyCode === 72 && thing < things.length ) {
+          place.appendChild(
+            document.createElement( 'h4' )
+          ).innerHTML = things[ thing++ ]
+        }
+      })
+    </script>
 </head>
 <body>
   <section id="toolbar">
@@ -18,12 +37,10 @@
     <section style="padding-top: 15%">
       <h1>Who does McKayla admire?</h1>
     </section>
-    <section style="background-color: #e42e4a">
-      <h1 style="padding-bottom: 50px">Guy Fieri</h1>
-      <img src="/present/guy.jpeg" style="float: left; padding-right: 50px" />
-      <h4>He's hard working</h4>
-      <h4>He's charitable</h4>
-      <h4>He's confident</h4>
+    <section style="background-color: #3b65e0" id="box">
+      <h1 style="padding-bottom: 50px">Jess</h1>
+      <img src="jess.jpg" style="float: left; margin-right: 50px; box-shadow: 0 0 20px black" width=500 />
+      <h4 style="padding-top: 125px">Hard working</h4>
     </section>
   </div>
 
