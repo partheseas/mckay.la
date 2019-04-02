@@ -10,17 +10,29 @@
 </head>
 <body>
   <div id="presentation">
-    <section style="padding-top: 15%">
+    <section style="padding-top: 30%; background-image: url( 'baby.jpeg' ); color: white">
       <h1>How do video games affect child development?</h1>
+      <h4>McKayla Washburn</h4>
     </section>
-    <section style="background-color: #3be065">
+    <section style="background-image: url( 'minecraft.jpeg' )">
       <h1>They are incredibly beneficial!</h1>
+      <ul>
+        <li>Improve motor skills</li>
+        <li>Increase social skills</li>
+      </ul>
     </section>
-    <section style="background-color: #691028">
+    <section style="background-image: url( 'doom.jpeg' ); color: white">
       <h1>They are incredibly problematic!</h1>
+      <ul>
+        <li>Potential to increase behavioral problems</li>
+      </ul>
     </section>
-    <section style="background-color: #3b56e0">
-      <h1>They are incredibly...confusing!</h1>
+    <section style="background-image: url( 'witness.jpeg' ); color: white">
+      <h1 id="target">They are incredibly</h1>
+      <ul>
+        <li>Communicate with your child about reasonable video game consumption</li>
+        <li>All things are best in moderation, and there is no reason to think that video games should be any different.</li>
+      </ul>
     </section>
   </div>
 
@@ -35,7 +47,16 @@
 
   <script type="application/javascript">
     $( document ).on( 'present:panel-changed', ( event, panel ) => {
-      console.log( panel )
+      if ( panel === 3 ) {
+        let target = document.getElementById( 'target' )
+
+        target.innerHTML = 'They are incredibly'
+
+        setTimeout( () => target.innerHTML += '.', 250 )
+        setTimeout( () => target.innerHTML += '.', 500 )
+        setTimeout( () => target.innerHTML += '.', 750 )
+        setTimeout( () => target.innerHTML += 'confusing.', 1500 )
+      }
     })
   </script>
 </body>
