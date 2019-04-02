@@ -8,10 +8,11 @@ function setPanelValue() {
 }
 
 function startAutoScrolling( toPanel, duration = 1000 ) {
-  autoScrolling = true
+    autoScrolling = true
   $( window ).scrollTo( toPanel * window.innerHeight, duration, { easing: 'easeOutExpo', onAfter: () => {
+    autoScrolling = false
     setPanelValue()
-    setTimeout( () => autoScrolling = false, 100 )
+    $( document ).trigger( 'present:panel-changed', [ panel ])
   }} )
 }
 

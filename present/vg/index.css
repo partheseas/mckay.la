@@ -1,0 +1,49 @@
+#toolbar {
+  display: none;
+
+  position: fixed;
+  top: 0px;
+  left: 0px;
+
+  width: 100%;
+}
+
+#presentation {
+  width: 100%;
+  height: 100%;
+}
+
+#presentation > section {
+  min-height: 100%;
+  width: 100%;
+
+  margin: 0;
+  padding: 7%;
+
+  box-shadow: 0 0 100px black;
+
+  font-size: 2.75em;
+}
+
+#presentation section > * {
+  border: 2px dashed transparent;
+}
+
+#presentation section > *:hover {
+  border: 2px dashed black;
+}
+
+.editing {
+  background-color: rgba( 246, 207, 172, 0.7 );
+  border: 2px dashed black;
+}
+
+.editing input {
+  font-size: 1em;
+
+  background-color: transparent;
+  border: none;
+
+  width: 100%;
+  padding: 0 0.2em;
+}
