@@ -32,6 +32,10 @@
   background-repeat: no-repeat;
 }
 
+#presentation li {
+  list-style-type: lower-roman;
+}
+
 #presentation section > * {
   border: 2px dashed transparent;
 }

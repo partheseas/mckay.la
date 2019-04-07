@@ -15,23 +15,28 @@
       <p>McKayla Washburn</p>
     </section>
     <section style="background-image: url( 'minecraft.jpeg' )">
-      <h1>They are incredibly beneficial!</h1>
+      <h1>They are beneficial!</h1>
       <ul>
         <li>Improve motor skills</li>
         <li>Increase social skills</li>
+        <li>Development of problem solving and team working abilities</li>
       </ul>
     </section>
     <section style="background-image: url( 'doom.jpeg' )">
-      <h1>They are incredibly problematic!</h1>
+      <h1>They are problematic!</h1>
       <ul>
         <li>Potential to increase behavioral problems</li>
+        <li>Some evidence of a negative effect on social skills</li>
+        <li>Addicitive behavior has sometimes been seen</li>
       </ul>
     </section>
     <section style="background-image: url( 'witness.jpeg' )">
-      <h1 id="target">They are incredibly</h1>
+      <h1 id="target">They are</h1>
       <ul>
         <li>Communicate with your child about reasonable video game consumption</li>
         <li>All things are best in moderation, and there is no reason to think that video games should be any different.</li>
+        <li>Video games are not as destructive as some may be inclined to believe,
+          but do come with some risks. Parents should observe and communicate with their children to find a healthy balance.</li>
       </ul>
     </section>
   </div>
@@ -49,13 +54,13 @@
     $( document ).on( 'present:panel-changed', ( event, panel ) => {
       if ( panel === 3 ) {
         let target = document.getElementById( 'target' )
+        let content = 'They are' // Prevents overlap errors
+        target.innerHTML = content
 
-        target.innerHTML = 'They are incredibly'
-
-        setTimeout( () => target.innerHTML += '.', 250 )
-        setTimeout( () => target.innerHTML += '.', 500 )
-        setTimeout( () => target.innerHTML += '.', 750 )
-        setTimeout( () => target.innerHTML += 'confusing.', 1500 )
+        setTimeout( () => target.innerHTML = content += '.', 250 )
+        setTimeout( () => target.innerHTML = content += '.', 500 )
+        setTimeout( () => target.innerHTML = content += '.', 750 )
+        setTimeout( () => target.innerHTML = content += 'both?', 1500 )
       }
     })
   </script>
