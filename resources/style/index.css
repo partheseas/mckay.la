@@ -24,8 +24,8 @@ h1 {
 
 .page-display h1 {
   font-size: 3em;
-  color: white;
-  text-shadow: 0 0 0.5in black;
+  color: #ffffff;
+  text-shadow: 0 0 0.5in #000000;
 }
 
 .page-content h1 {
@@ -80,6 +80,9 @@ a {
   height: 100%;
 
   display: none;
+  opacity: 0;
+
+  transition: opacity 300ms;
 
   grid-template-columns: 1fr auto 1fr;
   grid-template-rows: 1fr auto 1fr;
