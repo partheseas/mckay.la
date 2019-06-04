@@ -7,7 +7,7 @@ section {
 
   min-height: 100%;
 
-  box-shadow: 0 0 100px black;
+  box-shadow: 0 0 100px #000000;
 
   background-position: center;
   background-size: cover;
@@ -91,6 +91,11 @@ a {
   background-color: rgba( 14, 14, 14, 0.6 );
 }
 
+#credits.shown {
+  display: grid;
+  opacity: 1;
+}
+
 #overlay-content {
   grid-area: content;
 
@@ -123,7 +128,7 @@ a {
 .page-content {
   grid-area: content;
 
-  background-color: rgba( 255, 255, 255, 0.9 );
+  background-color: #ffffffe6;
   box-shadow: 0 0 100px black;
   padding: 0.5in 0.5in 0.6in 0.5in;
 }
