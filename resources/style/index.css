@@ -39,16 +39,16 @@ a {
 }
 
 @media screen and (min-width: 800px) and (min-height: 700px) and (orientation: landscape) {
-  section:nth-child(odd) {
-    grid-template-rows: auto;
-    grid-template-columns: auto 6in;
-    grid-template-areas: "display content";
-  }
-
-  section:nth-child(even) {
+  section.left {
     grid-template-rows: auto;
     grid-template-columns: 6in auto;
     grid-template-areas: "content display";
+  }
+
+  section.right {
+    grid-template-rows: auto;
+    grid-template-columns: auto 6in;
+    grid-template-areas: "display content";
   }
 }
 
@@ -56,12 +56,20 @@ a {
   background-image: url('/resources/images/background.png');
 }
 
-#education {
-  background-image: url('/resources/images/uvu.jpg');
+#observatory {
+  background-color: #12142d;
 }
 
-#hobbies {
-  background-image: url('/resources/images/tree.jpg');
+#observatory .page-display {
+  background-image: url(/resources/images/observatory.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+}
+
+
+#about {
+  background-image: url('/resources/images/dock.jpg');
 }
 
 #work {
