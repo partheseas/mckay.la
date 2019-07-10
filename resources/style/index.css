@@ -183,7 +183,7 @@ a {
   position: absolute;
   visibility: hidden;
 
-  background-color: #8e85f5;
+  background-color: var( --light-violet );
   box-shadow: 0 0 0.3in black;
   border-radius: 5px;
 
@@ -211,6 +211,26 @@ a {
   margin: 0 0.4in;
   padding: 0;
 	font-size: 0.55em;
+}
+
+#social {
+  font-size: 2rem;
+}
+
+#social a {
+  transition: color 300ms;
+}
+
+#social a:hover {
+  text-decoration: none;
+}
+
+#social a.uil-github:hover {
+  color: var( --light-violet );
+}
+
+#social a.uil-linkedin:hover {
+  color: var( --light-sky );
 }
 
 #close {
