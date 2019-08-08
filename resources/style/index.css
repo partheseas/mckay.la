@@ -164,16 +164,17 @@ a {
   margin: 0.1in 0.5in 0.1in 0.15in;
   padding: 0.15in 0.25in;
 
-  background-color: rgba( 255, 255, 255, 0.9 );
+  background-color: white;
+  opacity: 0.9;
   box-shadow: 0 0 0.3in black;
-  border-radius: 5px;
+  border-radius: 7px;
 
   transition: padding 300ms, margin 300ms, background 150ms;
   font-size: 1.5em;
 }
 
 .page-display ul a:hover {
-  background-color: rgba( 255, 255, 255, 1 );
+  opacity: 1;
   padding: 0.2in 0.3in;
   margin: 0 0.45in 0.1in 0.1in;
   text-decoration: none;
@@ -184,6 +185,8 @@ a {
   visibility: hidden;
 
   background-color: var( --light-violet );
+  /* background-color: inherit; */
+  color: black;
   box-shadow: 0 0 0.3in black;
   border-radius: 5px;
 
@@ -197,6 +200,7 @@ a {
   font-size: 0.5em;
 
   opacity: 0;
+  z-index: 100;
 }
 
 .page-display ul a:hover .tooltip {

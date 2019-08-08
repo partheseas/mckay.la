@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Gardens</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" type="text/css" href="/resources/oui/oui.min.css" />
+    <link rel="stylesheet" type="text/css" href="gardens.css" />
+  </head>
+  <body style="--accent-color: white">
+    <section id="header">
+      <h1>gardens</h1>
+      <a href="https://gardens.now.sh">Documentation</a>
+      &middot;
+      <a href="https://github.com/partheseas/gardens">Github</a>
+    </section>
+    <div class="workspace">
+      <textarea class="monospace" id="input">import garden from 'gardens';
+
+</textarea>
+      <pre id="output"></pre>
+    </div>
+    <section id="main"><div>
+      <p>Using gardens makes it easier to handle your log output and debugging
+        code by giving you the ability to break your output into named scopes,
+        handle errors in a unified way, and use the same library for it all
+        regardless of what your deployment target is. It supports scope nesting,
+        custom colors and styles, time stamps, high resolution timing, HTML
+        output, and many other fun things!</p>
+
+      <table>
+        <tr>
+          <th>
+            <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="Edge" width="24px" height="24px" /><br />
+            Edge
+          </th>
+          <th>
+            <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" /><br />
+            Firefox
+          </th>
+          <th>
+            <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" /><br />
+            Chrome
+          </th>
+          <th>
+            <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" /><br />
+            Safari
+          </th>
+          <th>
+            <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png" alt="Opera" width="24px" height="24px" /><br />
+            Opera
+          </th>
+          <th>
+            <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/electron/electron_48x48.png" alt="Electron" width="24px" height="24px" /><br />
+            Electron
+          </th>
+        </tr>
+      </table>
+
+      <ul>
+        <li>Node.js</li>
+        <li>Deno</li>
+        <li>React Native</li>
+      </ul>
+
+      <pre>// CommonJS (Node.js, Electron)
+const gardens = require( 'gardens' );</pre>
+      <pre>// CommonJS (React Native)
+const gardens = require( 'gardens/native' );</pre>
+      <pre>// Bundled ES6 (Browsers, Rollup, Webpack, Parcel, etc.)
+import gardens from 'gardens';</pre>
+      <pre>// ES6 (Deno)
+import gardens from 'https://deno.land/x/gardens/mod.ts';</pre>
+      <pre>// &lt;script> (Browsers)
+&lt;script type="application/javascript" src="https://unpkg.com/gardens@^4">&lt;/script></pre>
+    </div></section>
+    <section id="footer">
+      &copy; 2019 &hearts; <a href="https://mckay.la">McKayla</a>
+    </section>
+
+    <script type="application/javascript" src="/gardens/dist/gardens.umd.js"></script>
+    <script type="application/javascript" src="gardens.js"></script>
+  </body>
+</html>

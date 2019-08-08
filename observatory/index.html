@@ -4,21 +4,41 @@
   <title>Observatory</title>
 
   <link rel="stylesheet" type="text/css" href="/resources/oui/oui.min.css" />
+
+  <style>
+    #footer {
+      background-image: url( '/resources/images/background.png' );
+      background-size: cover;
+
+      color: white;
+      box-shadow: 0 0 10px black inset;
+      text-align: center;
+      text-shadow: 0 0 10px black;
+    }
+  </style>
 </head>
-<body style="background-color: #12142d; color: #bdbfed">
+<body style="background-color: #12142d; color: #bdbfed; --accent-color: white">
   <section style="text-align: center; padding-top: 5em">
     <h1 style="font-size: 5em; font-weight: 300">Observatory 🔭</h1>
-    <img src="observatory.png" style="width: 90vw; margin: auto" />
-    <a href="https://github.com/partheseas/observatory" style="display: inline-block; background-color: var( --dark-sky ); color: white; font-size: 1.5em; border-radius: 2em; padding: 0.75em 2em">Get Observatory</a>
+    <img src="observatory.png" style="max-width: 90vw; max-height: 90vh; margin: auto" />
+    <a style="display: inline-block; background-color: var( --dark-sky ); color: white; font-size: 1.5em; border-radius: 2em; padding: 0.75em 2em">Coming soon</a>
+    <!-- <a href="https://github.com/partheseas/observatory" style="display: inline-block; background-color: var( --dark-sky ); color: white; font-size: 1.5em; border-radius: 2em; padding: 0.75em 2em">macOS</a> -->
+    <!-- <a href="https://github.com/partheseas/observatory" style="display: inline-block; background-color: var( --dark-sky ); color: white; font-size: 1.5em; border-radius: 2em; padding: 0.75em 2em">Ubuntu/Debian</a> -->
   </section>
   <section style="margin: auto; max-width: 10in; font-size: 2em">
     <p>Observatory is a modern cross-platform disk usage analyzer.
-      It utilizes a radial sunburst graph for it's primary display element
-      to make it painless and simple to piece together exactly what is taking
+      It utilizes a radial sunburst graph to make it painless and simple to piece together exactly what is taking
       up space on your computer.</p>
-    <p>Under the hood it uses Electron, React, and Canvas2D. What this means
-      for most people is that the building blocks underneath are modern, robust,
-      and have a clear upgrade path for future development.</p>
+    <!-- <ul>
+      <li>Electron</li>
+      <li>Rollup</li>
+      <li>Parcel</li>
+      <li>React</li>
+      <li>Sass</li>
+    </ul> -->
   </section>
+  <section id="footer">
+      &copy; 2019 &hearts; <a href="https://mckay.la">McKayla</a>
+    </section>
 </body>
 </html>

@@ -1,0 +1,80 @@
+#navigation {
+  background-color: lightsteelblue;
+}
+
+#header {
+  background-color: lightgreen;
+  background-image: url( '/resources/images/gardens.jpg' );
+  background-size: cover;
+  background-position: bottom;
+
+  color: white;
+  padding: 2in 0 1in 0;
+  text-align: center;
+}
+
+#header h1 {
+  font-size: 5rem;
+  text-shadow: 10px 10px 0px mediumaquamarine, 0 0 2in black;
+}
+
+#header a {
+  font-size: 1.5rem;
+  text-shadow: 0 0 10px black;
+}
+
+.workspace > * {
+  background-color: transparent;
+  border: none;
+
+  margin: 0;
+  border-radius: 0;
+  padding: 0.2in;
+  height: 4.5in;
+
+  overflow: scroll;
+  word-break: keep-all;
+}
+
+.workspace textarea {
+  background-color: #212430;
+  color: white;
+}
+
+@media screen and (min-width: 12in) {
+  .workspace {
+    /* background-color: #212430;
+    color: white; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "code output";
+  }
+
+  .workspace > * {
+    padding: 0.5in;
+  }
+}
+
+.workspace > * {
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+#main {
+  background-color: mediumaquamarine;
+}
+
+#main div {
+  max-width: 12in;
+  margin: auto;
+}
+
+#footer {
+  background-image: url( '/resources/images/background.png' );
+  background-size: cover;
+
+  color: white;
+  box-shadow: 0 0 10px black inset;
+  text-align: center;
+  text-shadow: 0 0 10px black;
+}
