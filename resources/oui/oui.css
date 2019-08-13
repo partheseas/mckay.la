@@ -380,7 +380,7 @@ th, td {
 }
 
 :root {
-  --accent-color: #4baff1;
+  --accent-color: black;
   --sans-serif: Montserrat, Avenir Next, sans-serif;
   --serif: Roboto Slab, serif;
   --monospace: Roboto Mono, monospace;
@@ -389,7 +389,6 @@ th, td {
 html, body {
   margin: 0;
   padding: 0;
-  width: 100vw;
   min-height: 100vh;
   font-family: "Montserrat", "Avenir Next", sans-serif;
   font-family: var(--sans-serif);
@@ -520,7 +519,7 @@ textarea, input {
   width: 100%;
 }
 textarea:focus, input:focus {
-  border: 1px solid #4baff1;
+  border: 1px solid black;
   border: 1px solid var(--accent-color);
 }
 
@@ -573,7 +572,7 @@ li * {
 
 a {
   text-decoration: none;
-  color: #4baff1;
+  color: black;
   color: var(--accent-color);
   font-weight: 500;
 }
@@ -601,7 +600,7 @@ input[type=checkbox] {
   transition: padding 200ms, background-color 300ms;
 }
 input[type=checkbox]:checked {
-  background-color: #4baff1;
+  background-color: black;
   background-color: var(--accent-color);
   padding-left: 2rem;
   padding-right: 0;
@@ -619,7 +618,7 @@ input[type=radio] {
   transition: background-color 300ms;
 }
 input[type=radio]:checked {
-  background-color: #4baff1;
+  background-color: black;
   background-color: var(--accent-color);
   filter: contrast(150%);
 }
