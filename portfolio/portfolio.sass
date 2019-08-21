@@ -1,0 +1,99 @@
+#logo
+  // --accent-color: black
+
+  & + *
+    padding-top: 1.25in
+
+#banner
+  padding-bottom: 0.75in
+  background-color: black
+    
+  color: white
+
+  @media screen and (min-width: 10in)
+    padding-top: 45vh
+
+  canvas
+    position: absolute
+    left: 0px
+    top: 0px
+
+    z-index: -1
+
+  #social
+    font-size: 2em
+    float: right
+    
+    background-color: #000000cc
+    border-radius: 4px
+    padding: 0.05em
+
+a.uil
+  display: inline-block
+  transition: transform 300ms
+
+a.uil:hover
+  text-decoration: none
+  transform: scale( 1.2 )
+
+  
+#projects
+  --accent-color: var( --night )
+  margin: auto
+  max-width: 12.5in
+
+  img
+    max-width: 100%
+    border-radius: 4px
+    margin: 0.25in auto
+    box-shadow: 0 0 15px #d2d2d2
+
+  div.small img
+    max-height: 2.5in
+    max-width: 2.5in
+  
+  @media screen and (min-width: 10in)
+    div#lab
+      display: grid
+      grid-template-columns: 1fr 1fr
+
+    div.small
+      display: inline-block
+      padding: 0.25in
+    
+      // Small project images should have a ratio of 1 for consistency
+      img
+        max-height: 1.5in
+
+    div.large
+      padding: 0.25in
+      min-height: 4.5in
+
+      // Large project images should have a ratio of 1.3745318352 for consistency
+      img
+        max-height: 3.5in
+
+    img.left
+      float: left
+      margin-right: 0.5in
+    img.right
+      float: right
+      margin-left: 0.5in
+  
+#about
+  // background-color: aquamarine
+
+  // h2
+  //   text-shadow: 0 0 15px black
+
+  @media screen and (min-width: 11in)
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+  
+    div
+      padding: 0.25in
+  
+  @media screen and (max-width: 11in)
+    div
+      margin-bottom: 0.4in
+

@@ -1,0 +1,51 @@
+doctype html
+html(lang='en-US')
+  head
+    block head
+      title mckay.la
+    
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(http-equiv="Content-Type" content="text/html;charset=utf-8")
+    //- meta(http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://mckay.la https://fonts.googleapis.com/; font-src https://fonts.gstatic.com/;")
+
+    link(rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico")
+    link(rel="stylesheet" type="text/css" href="/resources/oui/oui.sass")
+    link(rel="stylesheet" type="text/css" href="/resources/fonts/fonts.css")
+    link(rel="stylesheet" type="text/css" href="/layout.sass")
+    
+  body
+    h2#logo: a(href="/") mckayla
+
+    block body
+      section(style="color: red")
+        h1 This page has no content.
+        p Sorry about that :(
+
+    section#footer
+      div#copyright
+        p &copy; 2019 &hearts; <a href="/">McKayla</a>
+      div
+        p Apps
+        ul
+          li: a(href="/observatory/") Observatory
+        p Games
+        ul
+          li: a(href="/lab/dangerous/") Dangerous
+          li: a(href="/hell/") Hell
+          li: a(href="/lab/ouroboros/") Ouroboros
+      div
+        p Open Source
+        ul
+          li: a(href="/amethyst/") amethyst
+          li: a(href="/gardens/") gardens
+          li: a(href="/oui/") oui
+          li: a(href="https://github.com/partheseas/string-spirits/") string-spirits
+          li: a(href="https://github.com/partheseas/unzzz/") unzzz
+      div
+        p About
+        ul
+          li: a(href="https://github.com/partheseas") Github
+          //- li: a(href="https://medium.com/@partheseas") Medium
+          li: a(href="https://linkedin.com/in/mckaylawashburn") Linkedin
+
+    block scripts

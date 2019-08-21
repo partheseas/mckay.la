@@ -1,0 +1,24 @@
+doctype html
+html(lang='en-US')
+  head
+    block head
+      title Present
+
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(http-equiv="Content-Type" content="text/html;charset=utf-8")
+
+    link(rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico")
+    link(rel="stylesheet" type="text/css" href="/resources/oui/oui.sass")
+    link(rel="stylesheet" type="text/css" href="/present/present.sass")
+  body
+    div#presentation
+      block presentation
+
+  script(type="application/javascript" crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js")
+  script(type="application/javascript" crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js")
+  script(type="application/javascript" crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.js")
+
+  script(type="application/javascript" src="/present/present.js")
+  script(type="application/javascript" src="/present/index.js")
+
+  block scripts

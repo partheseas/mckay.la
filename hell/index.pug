@@ -1,0 +1,268 @@
+extends ../layout.pug
+
+block head
+  title Hell
+  link(rel="stylesheet" type="text/css" href="design.css")
+
+block scripts
+  script(type="application/javascript" src="https://unpkg.com/react@16/umd/react.development.js")
+  script(type="application/javascript" src="https://unpkg.com/react-dom@16/umd/react-dom.development.js")
+  script(type="application/javascript" src="menu.js")
+
+block body
+  section.banner
+    p New game
+    p Load game
+    p.active Continue
+    p Options
+    h1.sans-serif Hell
+    h6.version &copy; 2019 &hearts; McKayla &middot; 0.0.0-2019-07-15-22-24
+
+  section(style="max-width: 11in")
+    h2#toc: a(href="#toc") Contents
+    section
+      ol
+        li: a(href="#premise") Premise
+        li: a(href="#locations") Locations
+        ol
+          li: a(href="#crown-hemisphere") Crown Hemisphere
+          li: a(href="#haven-hemisphere") Haven Hemisphere
+          li: a(href="#halo-forest") Halo Forest
+        li: a(href="#events") Events
+        li: a(href="#characters") Characters
+        li: a(href="#story") Story
+        li: a(href="#gameplay") Gameplay
+        li: a(href="#futures") Future expansion
+
+    h2#premise Premise
+    section
+      h3 Hell
+      p.
+        The world of <a>Hell</a> is a small but lush paradise world inhabited by
+        <a>Citizens</a> and several forms of wild life that all feel vaguely familiar.
+        The lone interuption to this world of calm and peace is <a>Hell Mountain</a>, located
+        in the middle of <a>Halo Forest</a>. It is seperated into two hemispheres by a wide spanning river
+        running directly through the middle of them. Though the river completely seperates them, they are
+        connected by <a>Halo Forest</a> for those who know how to traverse through it.
+      h3 Citizens
+      p.
+        <a>Citizens</a> are a species of humanoid creatures that inhabit the world of <a>Hell</a>.
+        They were once immortal, but are just now starting to face the struggles of
+        living finite lives.
+      section
+        h4 Clouds
+        p.
+          <a>Clouds</a> are small dark patches on the skin of <a>Citizens</a> that resemble
+          moles or tattoos. <a>Citizens</a> are all slowly consumed as their bodies are covered by their clouds
+          over the course of time. They only started appearing recently, about the time
+          that the <a>Corruption</a> began. People were originally concerned, but dismissed
+          their severity after a few months when nothing really seemed to be coming of them.
+          More recently people have realized that <a>Clouds</a> are leeches which slowly drain
+          the <a>Halo</a> from the <a>Citizens</a> they cloud.
+      h3 Halo
+      p.
+        <a>Halo</a> is the energy of the world of <a>Hell</a>. All life that exists is formed
+        from this mysterious semisolid substance. <a>Citizens</a> do have the ability
+        to interact with it, though it involves years of careful training and isn't
+        done through physical means. It is done by <a>Angels</a> who use their own
+        <a>Halo</a> to influence it. It appears white in color and is slightly translucent.
+      h3 Angels
+      p.
+        <a>Citizens</a> who have trained to influence <a>Halo</a>. They performed rituals
+        on <a>Hell Mountain</a> which were believed to benefit all of the inhabitants of the world.
+        Several years ago when they last traveled to the ritual grounds something happened
+        and none of them returned. A few days later, the <a>Corruption</a> began.
+      section
+        h4 Annointed
+        p.
+          <a>Angels</a> who completed their training and had been formally recognized by the others
+          were referred to as <a>Annointed</a>.
+        h4 Training
+        p.
+          Those who desire to become <a>Angels</a> move to <a>Omen</a> sometime after
+          turning 16 to begin their training among the <a>Annointed</a>. They must learn how
+          to interact with <a>Halo</a> by using their own to influence it. This ability allows
+          them to conjure great power and navigate through <a>Halo Forest</a>.
+      h3 Pixies
+      p.progress
+        Spirits which take the shape of animals and wander around <a>Halo Forest</a>. They are
+        only visible to those with strong connections to <a>Halo</a>.
+
+    h2#locations Locations
+    section
+      h2#crown-hemisphere(style="--color: var( --gold )") Crown Hemisphere
+      section
+        h3 Halo
+        p.progress A city near the border of <a>Halo Forest</a> that is in close proximity to <a>Halo Lake</a>.
+        h3 Memory
+        p.
+          A city with a large university dedicated to the study of utilizing <a>Halo</a> as a tool
+          to benefit <a>Hell</a> by creating devices which can use <a>Halo</a> as a power source.
+        h3 Paradise
+        p.incomplete The city of <a>Paradise</a>.
+        h3 Oasis
+        p.
+          A farm town which use to be incredibly fertile but has been struggling in
+          recent time to flourish the way they have in years past.
+        h3 Omen
+        p The city of <a>Angels</a> which sits on the edge of <a>Halo Forest</a> nearest <a>Hell Mountain</a>.
+
+      h2#haven-hemisphere(style="--color: var( --turquoise )") Haven Hemisphere
+      section
+        h3 Temple
+        p.
+          <a>Temple</a> is an uninhabited city ruin built around an ancient temple that the construction
+          of isn't truly known. Since the <a>Corruption</a>, <a>Citizens</a> of the <a>Haven Hemisphere</a>
+          have noticed that it has a similar darkness eminating from it similar to the one
+          eminating from <a>Hell Mountain</a>. It resides on an island near the coast of <a>Euphoria</a>.
+        h3 Euphoria
+        p.
+          Sitting on the coast near the island of <a>Temple</a>, Euphoria is a city built around some strange stone
+          remains that look like they may have once formed statues and alters. It is home to a group of researchers
+          that often visit the nearby desert to explore for other lost remains in attempts to learn more about the
+          mysterious history of the strange world they live in.
+        h3 Philo
+        p.incomplete The city of <a>Philo</a>.
+        h3 Tranquility
+        p.incomplete The city of <a>Tranquility</a>.
+        h3 Haven
+        p.
+          Haven is the city farthest from <a>Hell Mountain</a>. It is a new settlement which only
+          developed as <a>Clouds</a> started appearing after the <a>Corruption</a>. Some <a>Citizens</a>
+          were afraid that <a>Hell Mountain</a> was punishing them and that moving farther away might
+          lessen the effects of the <a>Corruption</a>. They sought a retreat and named it <a>Haven</a>.
+
+      h2#halo-forest(style="--color: var( --emerald )") Halo Forest
+      section
+        p.
+          <a>Halo Forest</a> is a forest that covers and connects the two hemispheres of <a>Hell</a>,
+          but somehow has a complete perimeter on each. The connection between the two hemispheres
+          somehow only exists inside of the forest. It is also the only place on <a>Hell</a> where
+          you can find <a>**wildhalos**</a>. The trees grow with a <span style="color: var( --copper )">pale brown bark</span> and a slight blue
+          tint on the <span style="color: #0dba96">mostly green leaves</span>.
+        h3 Halo Lake
+        p.
+          A lake as large around and as deep as <a>Hell Mountain</a> is tall. Those still brave enough
+          to venture into the forest note that the <a>Halo</a> level has begun slowly getting lower.
+          The trees that surround the lake glow with a <span style="color: #b82511">beautiful auburn shine</span>
+          eminating from their leaves.
+        h3 Hell Mountain
+        p.
+          <a>Hell Mountain</a> is a home to strange forces that are at conflict with
+          the rest of the world. It was once a sacred ritual ground for the <a>Angels</a>
+          before the <a>Corruption</a>. <a>Halo</a> used to collect around and on the
+          mountain, but now seems to avoid it.
+        h3 Heaven
+        p.progress A plane above <a>Hell Mountain</a> that serves as a home to the <a>Master of Pixies</a>.
+
+    h2#events Events
+    section
+      h3 Corruption
+      <p>A few years ago, after the disappearance of the <a>Angels</a>, <a>Hell Mountain</a>
+      began to change. It no longer glows with a radiant light, and it now has a darkness and ominence
+      to it. The <a>Corruption</a> has more recently begun spreading to <a>Halo Lake</a>.
+
+    h2#characters Characters
+    section
+      h3 Eve
+      p.
+        <a>Eve</a> is the protagonist that you play as during the story of <a>Hell</a>. She was training
+        to be an <a>Angel</a>, and although <a>Sam</a> and herself were usually part
+        of the rituals, they were told to stay behind on the day that the elders disappeared.
+      h3 Sam
+      p.progress.
+        A best friend of <a>Eve</a> and a fellow training <a>Angel</a> before the <a>Annointed</a> went missing.
+      h3 Chariot
+      p.progress.
+        A half-wolf half-giraffe <a>Pixie</a> that guides <a>Eve</a> through <a>Halo Forest</a> when the
+        <a>Annointed</a> vanish.
+      h3 Master of Pixies
+      p.incomplete A guy
+
+    h2#story Story
+    section
+      h3 Objectives
+      p.incomplete I have some goals.
+      ul
+        li Purify <a>Hell Mountain</a> and restore balance to <a>Halo</a>.
+      p.incomplete Meta:
+      ul
+        li Over arching theme of selflessness and loss through selfish desires.
+      h3 Prologue
+      p.incomplete Everyone becomes gay
+      h3 Chapter 1
+      p.incomplete Orgy
+      h3 Chapter 2
+
+    h2#gameplay Gameplay
+    section
+      h3 Halo meter
+      p.
+        Your <a>Halo</a> meter is displayed as a sphere that appears completely white when full
+        and has a black center that will slowly spread as your <a>Halo</a> is depleted.
+
+    h2#futures Future expansion
+    section
+      h3 **fatboi**
+      p.progress.
+        A malicious force that rose to power long ago. An <a>Angel</a> that sought to use
+        the power of <a>Halo</a> to benefit themself. After years of exposure to <a>Halo</a>
+        it eventually disolved his <em>essence??</em> and formed <a>**fatterboi**</a>
+        in the process.
+      h3 **fatterboi**
+      p.progress.
+        A pure being of <a>Halo</a> which behaves irradically and is unable to sustain itself
+        without constantly absorbing additional <a>Halo</a> and discarding <em>**somethingelse**</em>.
+        Every time <em>**somethingelse**</em> is discarded, a small bit of disolved <em>essence??</em>
+        from <a>**fatboi**</a> is lost as well, resulting in another new, but weaker, being of pure
+        <a>Halo</a> called a <a>Consumed</a>.
+      h3 Consumed
+      p.
+        Dark creatures which resemble <a>Citizens</a> but are devoid of any identifiable features.
+        They are violent towards <a>Citizens</a> and will go to great lengths to attack them. Any
+        skin they come in to contact with will form an additional <a>Cloud</a> on the person.</p>
+      p.
+        <strong>Unknown:</strong> They drop small crystals when defeated which are made of <a>Halo</a>
+        and can be absorbed by <a>Eve</a>. They are manifestations of pure corrupted <a>Halo</a> and
+        only desire to obtain more <a>Halo</a> through whatever means necessary.
+
+  section.future: section
+    h3 Random notes
+    p.
+      Something about spirit animals. Possibly wolfs, possibly cool wolf giraffe mixes.
+    p.
+      All of the characters that guide you through the game would be spirit animals, all of
+      the humanoids would either just be casually going about their day or absolutely flipping
+      the fuck out over the end of the world. Which ever.
+    p.
+      The world has always been, and has existed as a constant throughout all of time. The
+      energy in the world took a while to condense into a small enough portion of the world
+      to form life. Babies form on top of a mountain where the energy has most condensed in the world.
+      The mountain came to be when the energy entered the planet and caused the ground to swell up.
+      The energy can be channeled through study and practice, but only by those with strong enough
+      energy themselves. As the population of the world increased, people slowly lost the ability
+      to control this magic as each individual had less spirit available to them.
+    p.
+      To balance out this energy, a darkness formed, and they both fight constantly to suppress
+      the other. Before the energy filled the world, it was filled with darkness. The energy sought
+      to push the darkness out of the world but could only suppress it. After years of struggling,
+      it is starting to break free, and manifest itself on the surface. The creatures that it
+      creates are attacking the people and animals the inhabit the land, and are unable to manifest
+      enough power to fight back. Except for one young girl, who has a name I’m pretty sure,
+      that was born of the energy to save the world from the darkness.<br />
+      When she turns 16, a spirit invites her into the woods. Her parents and the other towns
+      people scream out to stop her, but she can’t hear them and walks into the forest anyway.
+      Some ran towards her to try and bring her back, but as she walks past the tree line she
+      disappears. She wakes up on a white plate, that floats above the mountain. The master of
+      spirits approaches her and explains fate, and what she must do. She is told that she must
+      say goodbye to her loved ones and venture off to the abandoned island temple, an artifact
+      from long ago when the masses still practiced their magic powers, where she will be able
+      to gain her full strength and fight the beast of darkness.
+    p.
+      When she returns to her town, her parents are overjoyed to see her again. As she explains
+      what she saw, they ask that she spend one last week with them in the town before heading
+      off. She accepts. That night, the darkness attacks the village, and claims the life of
+      her beloved dog, who also probably has a name or something I thing. As she attempts to
+      protect him, a storm of power is unleashed from all around her, destroying several town
+      buildings and pushing back all of the darkness.
+

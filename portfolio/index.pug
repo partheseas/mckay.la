@@ -1,0 +1,114 @@
+extends ../layout.pug
+
+mixin bubblelist( ...items )
+  for item in items
+    //- The second line is to insert a space in between each bubble
+    span(style="display: inline-block; background-color: lavender; padding: 6px 8px; margin: 0 7px 10px 0; border-radius: 4px")= item
+    |  
+
+block head
+  title McKayla Washburn
+  link(rel="stylesheet" type="text/css" href="/portfolio/portfolio.sass")
+  link(rel="stylesheet" type="text/css" href="https://unicons.iconscout.com/release/v1.0.0/css/unicons.css")
+
+block scripts
+  script(type="application/javascript" src="/portfolio/banner.js")
+
+block body
+  section#banner
+    canvas#display
+    h3 Full stack web developer living in the Silicon Slopes.
+    p.
+      Expertise in <strong style="color: #eed91a">JavaScript</strong>.
+      Interest in everything.
+    div#social
+      a.uil.uil-github.light-violet(href="https://github.com/partheseas")
+      a.uil.uil-linkedin.light-sky(href="https://linkedin.com/in/mckaylawashburn")
+
+  section#intro
+    p.
+      I'm McKayla Washburn. I build web sites and applications using the
+      latest web technologies.
+
+  section#projects
+    div.large
+      img.right(src="/observatory/observatory.png")
+      h2
+        a(href="/observatory/") Observatory
+        | &nbsp;&middot;
+        a.uil.uil-github.light-violet(href="https://github.com/partheseas/observatory")
+      h6 A modern cross-platform disk usage analyzer 🔭
+      p.
+        Observatory utilizies a radial sunburst graph to to make it painless and simple
+        to piece together exactly what is taking up space on your computer.
+      br
+      p: +bubblelist( 'Electron', 'ESLint', 'Parcel', 'React', 'Rollup', 'Sass', 'styled-components' )
+
+    div.large
+      img.left(src="/resources/screenshots/gardens.jpg")
+      h2
+        a(href="/gardens/") Gardens
+        | &nbsp;&middot;
+        a.uil.uil-github.light-violet(href="https://github.com/partheseas/gardens")
+      h6 A useful logging utility for JavaScript <em>everywhere</em>. 🎉
+      p Gardens helps you keep your error and debugging output consistent in a managable way.
+      br
+      p: +bubblelist( 'Node.js', 'Deno', 'React Native', 'Electron', 'Browsers' )
+      p: +bubblelist( 'AVA', 'ESLint', 'Rollup', 'TypeDoc', 'TypeScript' )
+
+    hr
+
+    div#lab
+      div.small
+        img.left(src="/resources/screenshots/dangerous.jpg")
+        h2: a(href="/lab/dangerous/") Dangerous
+        p A minesweeper game! Clear the field and locate all the mines to win.
+        p: +bubblelist( 'React', 'TypeScript' )
+      
+      div.small
+        img.left(src="/resources/screenshots/ouroboros.jpg")
+        h2: a(href="/lab/ouroboros/") Ouroboros
+        p A snake game! Use WASD, arrow keys, or swipe gestures to control the snake.
+        p: +bubblelist( 'Canvas2D', 'Touch gestures' )
+
+    //- div.small
+    //-   h4 string-spirits
+    //-   p A library for matching wildcard/glob strings
+
+    //- div.small
+    //-   h4 unzzz
+    //-   p A lightweight library for extracting files from zip archives
+  
+  section#about
+    div
+      h2 Full stack <strong style="color: #2f6c1c">Node.js</strong> + <strong style="color: #38b8e6">React</strong>
+      p.
+        Full stack web development is definitely my area of expertise. I've worked
+        with HTML, CSS, and JavaScript casually for over 8 years and have been
+        working with those and many other technologies in a more professional manner
+        for over 5 years.
+      p.
+        I'm familiar with various things such as Sass, Express, React, React&nbsp;Router,
+        styled-components, RxJS, Vue, SSR, MongoDB, Parcel, Rollup, Babel,
+        TypeScript, CI, Unit Testing and more.
+    div
+      h2 <strong style="color: #9feaf9">Electron</strong> and <strong style="color: #38b8e6">React Native</strong>
+      p.
+        The use of web technologies in Electron and React Native allows me to
+        iterate quickly and produce high quality native applications across all
+        major platforms.
+      p.
+        I've built apps using both platforms and I'm familiar with the tooling
+        surrounding them, such as Electron Forge, Electron Builder,
+        Nucleus, Expo and React Native Navigation.
+    
+    div
+      h2 <strong style="color: #8e5030">Rust</strong> and <strong style="color: #654ff0">WebAssembly</strong>
+      p.
+        Rust and WebAssembly are both things that I find quite interesting,
+        and are incredibly fun to experiment with. I'm still learning, but I have worked
+        on a couple of small experiments with them and I'm always looking for a reason
+        to dig into more.
+      p.
+        My current project is a Game Boy Advanced emulator written in Rust than runs in
+        WebAssembly and uses a WebGL renderer.

@@ -1,5 +1,3 @@
-
-
 function playground1() {
   const inputElement = document.querySelector( '#input' );
   const outputElement = document.querySelector( '#output' );
@@ -9,24 +7,35 @@ function playground1() {
         outputElement.innerHTML += data;
       }
     },
-    outputType: 'html',
-    verbose: true
-  })
+    outputType: 'html'
+  });
+
+  const state = {
+    a: true,
+    b: 4,
+    c: 'lorem',
+    d: {
+      ipsum: [ 1, 2, 3 ]
+    },
+    e: false
+  };
 
   const input = [
     `garden.log( 'Hello there' );`,
-    `garden.success( 'Done!' );`,
-    `garden.debug({ currentState: {} });`,
+    `garden.success( 'Done!' );\n`,
+    `garden.configure({\n  verbose: true\n});\ngarden.debug( 'state:', state );\n`,
     `garden.time();`,
-    `garden.timeEnd();`,
+    `garden.timeEnd();\n`,
     `garden.configure({\n  displayTime: true\n});`,
-    `garden.fail( 'Oh no! :(' );`,
-    `const { debug } = garden.bound();\ndebug( 'Shorter calls!' );`,
+    `garden.fail( 'Oh no! :(' );\n`,
+    `const { debug } = garden.bound();\ndebug( 'Shorter calls!' );\n`,
     `const scoped = garden.createScope( 'lib' );\nscoped.log( 'Logging from lib' );`
   ];
 
   let timingPosition = 0;
   const timingChunk = 43;
+
+  inputElement.innerHTML += '\n\n';
 
   input.forEach( line => {
     line += '\n';
@@ -41,9 +50,14 @@ function playground1() {
     }
 
     setTimeout(
-      new Function( 'garden', line ),
+      new Function(
+        'garden',
+        'state',
+        line
+      ),
       timingPosition,
-      garden
+      garden,
+      state
     );
     timingPosition += 300;
   });

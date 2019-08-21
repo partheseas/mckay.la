@@ -1,0 +1,28 @@
+extends ../layout.pug
+
+block head
+  title Observatory
+  link(rel="stylesheet" type="text/css" href="observatory.sass")
+
+block body
+  section#header
+    h1 Observatory 🔭
+    img(src="observatory.png" alt="screenshot")
+    p.button Coming soon
+    //- a.button(href="#") macOS
+    //- a.button(href="#") Windows
+    //- a.button(href="#")
+    //-   img(src="https://c.s-microsoft.com/en-us/CMSImages/1920_Panel2_LinkNav_Learn_NonWin.svg?version=74bbe95f-722d-df9d-7cb1-fc45356a1aff")
+    //-   | Windows
+
+  section#content
+    p.
+      Observatory is a modern cross-platform disk usage analyzer.
+      It utilizes a radial sunburst graph to make it painless and simple to piece
+      together exactly what is taking up space on your computer.
+
+    p.
+      Your hard drive is probably full of old files that you don't need
+      anymore, which are taking up precious space.
+      Observatory can help you locate these files by giving you a clear
+      view of where the files are and how much space they are taking up.
