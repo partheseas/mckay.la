@@ -87,3 +87,22 @@ window.addEventListener( 'DOMContentLoaded', () => {
   banner.style.backgroundColor = 'transparent';
   render();
 });
+
+window.addEventListener( 'scroll', () => {
+  const projects = Array.from( document.getElementById( 'projects' ).children );
+
+  projects.forEach( ( container, index ) => {
+    const box = container.getBoundingClientRect();
+    const middle = window.innerHeight / 2;
+
+    // If we are above the .profile element, then make it big anyway.
+    // Otherwise, make whatever element is centered on the screen bigger.
+    if ( (box.top < middle || index === 0) && box.top + box.height > middle ) {
+      if ( !container.className.includes( 'enhance' ) ) container.className += ' enhance';
+    }
+    
+    else {
+      container.className = container.className.replace( ' enhance', '' );
+    }
+  });
+})

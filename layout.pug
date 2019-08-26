@@ -1,9 +1,6 @@
 doctype html
 html(lang='en-US')
-  head
-    block head
-      title mckay.la
-    
+  head 
     meta(name="viewport" content="width=device-width, initial-scale=1")
     meta(http-equiv="Content-Type" content="text/html;charset=utf-8")
     //- meta(http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://mckay.la https://fonts.googleapis.com/; font-src https://fonts.gstatic.com/;")
@@ -12,6 +9,9 @@ html(lang='en-US')
     link(rel="stylesheet" type="text/css" href="/resources/oui/oui.sass")
     link(rel="stylesheet" type="text/css" href="/resources/fonts/fonts.css")
     link(rel="stylesheet" type="text/css" href="/layout.sass")
+
+    block head
+      title mckay.la
     
   body
     h2#logo: a(href="/") mckayla
@@ -27,12 +27,13 @@ html(lang='en-US')
       div
         p Apps
         ul
+          li: a(href="/lavender/") Lavender
           li: a(href="/observatory/") Observatory
         p Games
         ul
-          li: a(href="/lab/dangerous/") Dangerous
-          li: a(href="/hell/") Hell
-          li: a(href="/lab/ouroboros/") Ouroboros
+          li: a(href="/dangerous/") Dangerous
+          //- li: a(href="/hell/") Hell
+          li: a(href="/ouroboros/") Ouroboros
       div
         p Open Source
         ul

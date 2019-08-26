@@ -14,7 +14,7 @@
     "typescript": "^3.5.3"
   },
   "scripts": {
-    "build": "parcel build index.pug **/*.pug lab/**/*.pug present/**/*.pug --no-source-maps --no-content-hash --out-dir public",
-    "dev": "parcel watch index.pug **/*.pug lab/**/*.pug present/**/*.pug --out-dir .bundled/parcel"
+    "build": "parcel build index.pug **/*.pug present/**/*.pug --no-source-maps --no-content-hash --out-dir public",
+    "dev": "parcel watch index.pug **/*.pug present/**/*.pug --out-dir .bundled/parcel"
   }
 }
