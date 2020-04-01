@@ -1,108 +1,101 @@
-import {
-  BoxGeometry,
-  Mesh,
-  MeshLambertMaterial,
-  MeshNormalMaterial,
-  PerspectiveCamera,
-  Scene,
-  SphereGeometry,
-  WebGLRenderer
-} from 'three';
+const floatyColors = [
+  // 'lavender',
+  // 'thistle',
+  // 'palegreen',
+  // 'mediumaquamarine',
+  // 'mediumseagreen',
+  // 'lightsteelblue',
+  // 'cornflowerblue',
+  // 'mediumpurple',
+  // 'royalblue',
+  // 'darkseagreen',
+  '#d4d4d444',
+];
 
-window.addEventListener( 'DOMContentLoaded', () => {
-  const banner = document.querySelector( '#banner' );
-  const canvas = document.querySelector( '#display' );
-  const renderer = new WebGLRenderer({
-    canvas
-  });
+const floatyShapes = [
+  '50% 50% 50% 50%',
+  '0 50% 50% 50%',
+  '50% 0 50% 50%',
+  '50% 50% 0 50%',
+  '50% 50% 50% 0',
+];
 
-  function aspect() {
-    const box = banner.getBoundingClientRect();
-    const height = box.height;
-    const width = box.width;
-    renderer.setSize( width, height );
+const pickOne = list => list[Math.floor(Math.random() * list.length)];
+const lessThanMagnitude = x => Math.floor(Math.random() * x * 2 - x);
 
-    return width / height;
-  }
-
-  const scene = new Scene();
-  const camera = new PerspectiveCamera( 50, aspect(), 0.1, 1000 );
+window.addEventListener('DOMContentLoaded', () => {
+  const display = document.querySelector('#display');
   
-  window.addEventListener( 'resize', () => {
-    camera.aspect = aspect();
-    camera.updateProjectionMatrix();
-    renderer.render( scene, camera );
-  });
+  const spacing = 50;
+  let cx, cy, fx, fy, i;
+  let friends = 0;
 
-  function makeCube( size ) {
-    const geometry = new BoxGeometry( size, size, size );
-    // const material = new MeshLambertMaterial();
-    const material = new MeshNormalMaterial();
-    const cube = new Mesh( geometry, material );
-    scene.add( cube );
+  const adjust = () => {
+    const box = display.getBoundingClientRect();
+    cx = box.width / 2 + 5;
+    cy = box.height / 2 - 40;
+    fx = cx / spacing;
+    fy = cy / spacing;
+  };
 
-    return cube;
-  }
+  window.addEventListener('resize', adjust);
 
-  // function makeSphere( size ) {
-  //   const geometry = new SphereGeometry( size );
-  //   // const material = new MeshLambertMaterial({
-  //   //   color: 0xa300ff
-  //   // });
-  //   const material = new MeshNormalMaterial();
-  //   const cube = new Mesh( geometry, material );
-  //   scene.add( cube );
-
-  //   return cube;
-  // }
-
-  // for ( let i = 0; i < 100; i++ ) {
-  //   const each = makeSphere( 1 );
-  //   each.position.x = i * 4;
-  //   each.position.z = -50;
-  // }
-
-  const a = makeCube( 6 );
-  const b = makeCube( 6 );
-  b.rotation.x = b.rotation.y = b.rotation.z = Math.PI / 4;
+  const floaty = () => {
+    const friend = document.createElement('div');
+    const dies = friends > 20 && Math.round(Math.random());
   
-  camera.position.z = 5;
+    friend.className = 'floaty';
+    friend.style.backgroundColor = pickOne(floatyColors);
+    friend.style.borderRadius = pickOne(floatyShapes);
+    friend.style.left = `${cx + lessThanMagnitude(fx) * spacing}px`;
+    friend.style.top = `${cy + lessThanMagnitude(fy) * spacing}px`;
+  
+    display.appendChild(friend);
+    setTimeout(() => {
+      friend.style.opacity = 1;
+    }, 200);
+    friends++;
 
-  // const controls = new OrbitControls( camera );
+    if (dies) {
+      setTimeout(() => {
+        friend.style.opacity = 0;
 
-  function render() {
-    // Update scene geometry
-    a.rotation.x += 0.004;
-    a.rotation.y += 0.004;
-    b.rotation.x -= 0.005;
-    b.rotation.y -= 0.005;
-    // controls.update();
-    renderer.render( scene, camera );
+        setTimeout(() => {
+          display.removeChild(friend);
+          friends--;
+        }, 300);
+      }, 30000);
+    }
 
-    // Request next frame
-    requestAnimationFrame( render );
+    if (friends > 75) {
+      clearInterval(i);
+    }
+  };
+
+  adjust();
+
+  for (let i = 0; i < fx + fy; i++) {
+    floaty();
   }
 
-  // Expose canvas element and being loop
-  banner.style.backgroundColor = 'transparent';
-  render();
+  i = setInterval(floaty, 700);
 });
 
-window.addEventListener( 'scroll', () => {
-  const projects = Array.from( document.getElementById( 'projects' ).children );
+window.addEventListener('scroll', () => {
+  const projects = Array.from(document.getElementById('projects').children);
 
-  projects.forEach( ( container, index ) => {
+  projects.forEach((container, index) => {
     const box = container.getBoundingClientRect();
     const middle = window.innerHeight / 2;
 
     // If we are above the .profile element, then make it big anyway.
     // Otherwise, make whatever element is centered on the screen bigger.
-    if ( (box.top < middle || index === 0) && box.top + box.height > middle ) {
-      if ( !container.className.includes( 'enhance' ) ) container.className += ' enhance';
+    if ((box.top < middle || index === 0) && box.top + box.height > middle) {
+      if (!container.className.includes('enhance')) container.className += ' enhance';
     }
     
     else {
-      container.className = container.className.replace( ' enhance', '' );
+      container.className = container.className.replace(' enhance', '');
     }
   });
 })

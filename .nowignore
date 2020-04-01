@@ -4,10 +4,6 @@
 # Dependencies
 node_modules
 
-# Exclude various large resources...
-.bundled
-.cache
+# Exclude build directory and cache
+.parcel-cache
 public
-
-# ...and other things that are only relevant to me
-dev

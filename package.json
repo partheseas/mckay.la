@@ -1,20 +1,19 @@
 {
-  "name": "mckay.la",
-  "license": "MIT",
-  "dependencies": {
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "three": "^0.107.0"
-  },
-  "devDependencies": {
-    "eslint": "^6.6.0",
-    "parcel-bundler": "^1.12.3",
-    "pug": "^2.0.4",
-    "sass": "^1.22.9",
-    "typescript": "^3.5.3"
-  },
-  "scripts": {
-    "build": "parcel build index.pug **/*.pug present/**/*.pug --no-source-maps --no-content-hash --out-dir public",
-    "dev": "parcel watch index.pug **/*.pug present/**/*.pug --out-dir .bundled/parcel"
-  }
+	"name": "mckay.la",
+	"license": "MIT",
+	"main": "public/index.html",
+	"dependencies": {
+		"react": "^16.13.0",
+		"react-dom": "^16.13.0"
+	},
+	"devDependencies": {
+		"parcel": "^2.0.0-nightly.185",
+		"pug": "^2.0.4",
+		"sass": "^1.26.0",
+		"typescript": "^3.8.3"
+	},
+	"scripts": {
+		"build": "parcel build index.pug **/index.pug",
+		"dev": "parcel index.pug **/index.pug"
+	}
 }

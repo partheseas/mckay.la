@@ -21,15 +21,15 @@ function playground1() {
   };
 
   const input = [
-    `garden.log( 'Hello there' );`,
-    `garden.success( 'Done!' );\n`,
-    `garden.configure({\n  verbose: true\n});\ngarden.debug( 'state:', state );\n`,
+    `garden.log('Hello there');`,
+    `garden.success('Done!');\n`,
+    `garden.configure({\n  verbose: true\n});\ngarden.debug('state:', state);\n`,
     `garden.time();`,
     `garden.timeEnd();\n`,
     `garden.configure({\n  displayTime: true\n});`,
-    `garden.fail( 'Oh no! :(' );\n`,
-    `const { debug } = garden.bound();\ndebug( 'Shorter calls!' );\n`,
-    `const scoped = garden.createScope( 'lib' );\nscoped.log( 'Logging from lib' );`
+    `garden.fail('Oh no! :(');\n`,
+    `const { debug } = garden.bound();\ndebug('Shorter calls!');\n`,
+    `const scoped = garden.createScope('lib');\nscoped.log('Logging from lib');`
   ];
 
   let timingPosition = 0;
