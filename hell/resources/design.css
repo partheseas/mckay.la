@@ -1,161 +1,162 @@
 :root {
-  --accent-color: var( --light-violet );
+	--accent-color: var(--light-violet);
 }
 
 body {
-  font-family: var( --serif );
+	font-family: var(--serif);
 }
 
 @keyframes active-menu {
-  from {
-    color: var( --light-violet );
-  }
+	from {
+		color: var(--light-violet);
+	}
 
-  50% {
-    color: var( --light-orange );
-  }
+	50% {
+		color: var(--light-orange);
+	}
 
-  to {
-    color: var( --light-yellow );
-  }
+	to {
+		color: var(--light-yellow);
+	}
 }
 
 @keyframes background-menu {
-  0% {
-    background-color: var( --light-violet );
-  }
+	0% {
+		background-color: var(--light-violet);
+	}
 
-  25% {
-    background-color: var( --light-pink );
-  }
+	25% {
+		background-color: var(--light-pink);
+	}
 
-  50% {
-    background-color: var( --light-orange );
-  }
+	50% {
+		background-color: var(--light-orange);
+	}
 
-  75% {
-    background-color: var( --light-yellow );
-  }
+	75% {
+		background-color: var(--light-yellow);
+	}
 
-  100% {
-    background-color: var( --light-violet );
-  }
+	100% {
+		background-color: var(--light-violet);
+	}
 }
 
 .banner {
-  /* animation: background-menu 25s ease-in 0s infinite normal; */
+	/* animation: background-menu 25s ease-in 0s infinite normal; */
 
-  background-color: #609c8d;
-  background-image: linear-gradient( transparent, var( --night ) );
-  padding-top: 35vh;
+	background-color: #609c8d;
+	background-image: linear-gradient(transparent, var(--night));
+	padding-top: 35vh;
 
-  color: white;
+	color: white;
 }
 
 .banner p {
-  border-left-color: var( --light-violet );
-  color: var( --light-violet );
+	border-left-color: var(--light-violet);
+	color: var(--light-violet);
 
-  margin-bottom: 1em;
+	margin-bottom: 1em;
 
-  transition: font-size 200ms;
+	transition: font-size 200ms;
 }
 
 .banner p.active {
-  animation: active-menu 0.1s ease-in 0s infinite alternate;
+	animation: active-menu 0.1s ease-in 0s infinite alternate;
 
-  font-size: 1.3em;
+	font-size: 1.3em;
 }
 
 .paint-swatch {
-  position: absolute;
+	position: absolute;
 
-  top: 1em;
-  right: 0em;
+	top: 1em;
+	right: 0em;
 }
 
 .paint-swatch div {
-  display: inline-block;
+	display: inline-block;
 
-  box-shadow: 0 0 3em black;
+	box-shadow: 0 0 3em black;
 
-  margin-right: 1em;
+	margin-right: 1em;
 
-  width: 2em;
-  height: 2em;
+	width: 2em;
+	height: 2em;
 }
 
 .version {
-  text-align: right;
+	text-align: right;
 }
 
 h1 {
-  --color: white;
+	--color: white;
 
-  font-size: 6em;
+	font-size: 6em;
 
-  /* letter-spacing: 0.1em; */
-  /* font-family: brush; */
-  /* text-transform: uppercase; */
-  text-transform: lowercase;
-  /* font-style: italic; */
-  /* font-weight: 300; */
+	/* letter-spacing: 0.1em; */
+	/* font-family: brush; */
+	/* text-transform: uppercase; */
+	text-transform: lowercase;
+	/* font-style: italic; */
+	/* font-weight: 300; */
 }
 
 h2 {
-  --color: var( --light-orange );
+	--color: var(--light-orange);
 }
 
-h1, h2 {
-  color: var( --color );
-  border-left: 1px solid var( --color );
-  padding-left: 0.4in;
+h1,
+h2 {
+	color: var(--color);
+	border-left: 1px solid var(--color);
+	padding-left: 0.4in;
 }
 
 #toc {
-  position: sticky;
-  top: 0;
+	position: sticky;
+	top: 0;
 
-  background-color: white;
+	background-color: white;
 }
 
 ul {
-  list-style-type: square;
+	list-style-type: square;
 }
 
 ol {
-  list-style-type: lower-roman;
+	list-style-type: lower-roman;
 }
 
 ol ol {
-  list-style-type: lower-alpha;
+	list-style-type: lower-alpha;
 }
 
 li {
-  padding: 0.05in;
+	padding: 0.05in;
 }
 
 p {
-  border-left: 1px solid black;
-  padding-left: 0.2in;
+	border-left: 1px solid black;
+	padding-left: 0.2in;
 }
 
 .incomplete::before {
-  content: "[Incomplete!!!] ";
-  color: var( --red );
-  font-weight: 700;
+	content: "[Incomplete!!!] ";
+	color: var(--red);
+	font-weight: 700;
 }
 
 .progress::before {
-  content: "[Work in Progress] ";
-  color: var( --magenta );
-  font-weight: 700;
+	content: "[Work in Progress] ";
+	color: var(--magenta);
+	font-weight: 700;
 }
 
 .future {
-  background-color: var( --turquoise );
-  color: var( --light-magenta );
+	background-color: var(--turquoise);
+	color: var(--light-magenta);
 
-  font-weight: 500;
-  /* text-shadow: 0 0 3px #a6a6a6; */
+	font-weight: 500;
+	/* text-shadow: 0 0 3px #a6a6a6; */
 }

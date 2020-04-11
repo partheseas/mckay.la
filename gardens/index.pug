@@ -1,68 +1,67 @@
 extends ../layout.pug
 
 block head
-  title Gardens
-  link(rel="stylesheet" type="text/css" href="gardens.sass")
+	title Gardens
+	link(rel="stylesheet", type="text/css", href="gardens.scss")
 
 block scripts
-  script(type="application/javascript" src="https://unpkg.com/gardens@^4")
-  script(type="application/javascript" src="gardens.js")
+	script(type="application/javascript", src="https://unpkg.com/gardens@^4")
+	script(type="application/javascript", src="gardens.js")
 
 block body
-  section#header
-    h1 gardens
-    a(href="https://gardens.now.sh") Documentation
-    | &nbsp;&middot;&nbsp;
-    a(href="https://github.com/partheseas/gardens") Github
-  div.workspace
-    //- <textarea class="monospace" id="input">import garden from 'gardens';
-    textarea#input.monospace import garden from 'gardens';
-    pre#output
+	section#header
+		h1 gardens
+		a(href="https://gardens.now.sh") Documentation
+		| &nbsp;&middot;&nbsp;
+		a(href="https://github.com/partheseas/gardens") Github
+	.workspace
+		//- <textarea class="monospace" id="input">import garden from 'gardens';
+		textarea#input.monospace import garden from 'gardens';
+		pre#output
 
-  section#main: div
-    h4 A useful logging utility for JavaScript <em>everywhere</em>. 🎉
-    p Using gardens makes it easier to handle your log output and debugging
-      | code by giving you the ability to break your output into named scopes,
-      | handle errors in a unified way, and use the same library for it all
-      | regardless of what your deployment target is. It supports scope nesting,
-      | custom colors and styles, time stamps, high resolution timing, HTML
-      | output, and many other fun things!
+	section#main: div
+		h4 A useful logging utility for JavaScript <em>everywhere</em>. 🎉
+		p Using gardens makes it easier to handle your log output and debugging
+			| code by giving you the ability to break your output into named scopes,
+			| handle errors in a unified way, and use the same library for it all
+			| regardless of what your deployment target is. It supports scope nesting,
+			| custom colors and styles, time stamps, high resolution timing, HTML
+			| output, and many other fun things!
 
+		table
+			tr
+				each name in [ 'Edge', 'Firefox', 'Chrome', 'Safari', 'Opera', 'Electron' ]
+					- let lower = name.toLowerCase();
+					th
+						img(
+							src=`https://raw.githubusercontent.com/alrra/browser-logos/master/src/${lower}/${lower}_48x48.png`,
+							width="24px",
+							height="24px"
+						)
+						br
+						span= name
 
-    table
-      tr
-        each name in [ 'Edge', 'Firefox', 'Chrome', 'Safari', 'Opera', 'Electron' ]
-          - let lower = name.toLowerCase()
-          th
-            img(
-              src=`https://raw.githubusercontent.com/alrra/browser-logos/master/src/${lower}/${lower}_48x48.png`
-              width="24px"
-              height="24px"
-            )
-            br
-            span= name
+		ul
+			li Node.js
+			li Deno
+			li React Native
 
-    ul
-      li Node.js
-      li Deno
-      li React Native
-    
-    pre
-      | // CommonJS (Node.js, Electron)
-      | const gardens = require('gardens');
+		pre
+			| // CommonJS (Node.js, Electron)
+			| const gardens = require('gardens');
 
-    pre
-      | // CommonJS (React Native)
-      | const gardens = require('gardens/native');
+		pre
+			| // CommonJS (React Native)
+			| const gardens = require('gardens/native');
 
-    pre
-      | // Bundled ES6 (Browsers, Rollup, Webpack, Parcel, etc.)
-      | import gardens from 'gardens';
+		pre
+			| // Bundled ES6 (Browsers, Rollup, Webpack, Parcel, etc.)
+			| import gardens from 'gardens';
 
-    pre
-      | // ES6 (Deno)
-      | import gardens from 'https://deno.land/x/gardens/mod.ts';
+		pre
+			| // ES6 (Deno)
+			| import gardens from 'https://deno.land/x/gardens/mod.ts';
 
-    pre
-      | &lt;!-- &lt;script> (Browsers) -->
-      | &lt;script type="application/javascript" src="https://unpkg.com/gardens@^4">&lt;/script>
+		pre
+			| &lt;!-- &lt;script> (Browsers) -->
+			| &lt;script type="application/javascript" src="https://unpkg.com/gardens@^4">&lt;/script>

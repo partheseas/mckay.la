@@ -1603,6 +1603,13 @@
     chrome-trace-event "^1.0.2"
     nullthrows "^1.1.1"
 
+"@prettier/plugin-pug@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@prettier/plugin-pug/-/plugin-pug-1.2.0.tgz#5453f22201a8d4633d4fffe9e9408cbca561ac60"
+  integrity sha512-xuwzuojbJ8LsaUJW0BxySIF72d/kUJUHUd9NMDgTQkDlbN+O9dci7ptUSXP61oGUYdab2tqTZDH+tDhnwJY2pA==
+  dependencies:
+    pug-lexer "~4.1.0"
+
 "@types/babel-types@*", "@types/babel-types@^7.0.0":
   version "7.0.7"
   resolved "https://registry.yarnpkg.com/@types/babel-types/-/babel-types-7.0.7.tgz#667eb1640e8039436028055737d2b9986ee336e3"
@@ -5306,6 +5313,11 @@ prelude-ls@~1.1.2:
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.1.2.tgz#21932a549f5e52ffd9a827f570e04be62a97da54"
   integrity sha1-IZMqVJ9eUv/ZqCf1cOBL5iqX2lQ=
 
+prettier@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.0.4.tgz#2d1bae173e355996ee355ec9830a7a1ee05457ef"
+  integrity sha512-SVJIQ51spzFDvh4fIbCLvciiDMCrRhlN3mbZvv/+ycjvmF5E73bKdGfU8QDLNmjYJf+lsGnDBC4UUnvTe5OO0w==
+
 private@^0.1.8:
   version "0.1.8"
   resolved "https://registry.yarnpkg.com/private/-/private-0.1.8.tgz#2381edb3689f7a53d653190060fcf822d2f368ff"
@@ -5402,7 +5414,7 @@ pug-filters@^3.1.1:
     resolve "^1.1.6"
     uglify-js "^2.6.1"
 
-pug-lexer@^4.1.0:
+pug-lexer@^4.1.0, pug-lexer@~4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/pug-lexer/-/pug-lexer-4.1.0.tgz#531cde48c7c0b1fcbbc2b85485c8665e31489cfd"
   integrity sha512-i55yzEBtjm0mlplW4LoANq7k3S8gDdfC6+LThGEvsK4FuobcKfDAwt6V4jKPH9RtiE3a2Akfg5UpafZ1OksaPA==
