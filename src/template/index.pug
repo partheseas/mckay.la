@@ -1,0 +1,84 @@
+doctype html
+html(lang="en-US")
+	head 
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+		meta(http-equiv="Content-Type", content="text/html;charset=utf-8")
+		meta(
+			http-equiv="Content-Security-Policy",
+			content="style-src 'self' https://mckay.la https://fonts.googleapis.com/ https://unicons.iconscout.com/; font-src 'self' https://mckay.la https://fonts.gstatic.com/ https://unicons.iconscout.com/;"
+		)
+
+		link(rel="icon", type="image/vnd.microsoft.icon", href="/resources/favicon.ico")
+		link(
+			rel="shortcut icon",
+			type="image/vnd.microsoft.icon",
+			href="/resources/favicon.ico"
+		)
+		//- link(rel="apple-touch-icon" href="/apple-touch-icon.png")
+		//- link(rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png")
+		//- link(rel="icon" href="/apple-touch-icon.png")
+
+		link(
+			rel="stylesheet",
+			type="text/css",
+			href="https://unicons.iconscout.com/release/v1.0.0/css/unicons.css"
+		)
+		link(rel="stylesheet", type="text/css", href="/resources/oui/oui.sass")
+		link(rel="stylesheet", type="text/css", href="/resources/fonts/fonts.css")
+		link(rel="stylesheet", type="text/css", href="/template/layout.scss")
+
+		block head
+			title mckay.la
+
+	body
+		#logo
+			h2: a(href="/") mckayla
+
+		block body
+			section.empty
+				h1 This page has no content.
+				p Sorry about that :(
+
+		section#footer
+			#copyright
+				p &copy; 2020 &hearts; <a href="/">McKayla</a>
+			#contact
+				p: strong About
+				h2.social-icons
+					a.uil.uil-github.light-violet(
+						title="Github",
+						href="https://github.com/partheseas"
+					)
+					a.uil.uil-linkedin.light-sky(
+						title="LinkedIn",
+						href="https://linkedin.com/in/mckaylawashburn"
+					)
+					a.uil.uil-instagram.pink(
+						title="Instagram",
+						href="https://instagram.com/partheseas"
+					)
+					a.uil.uil-twitter.light-turquoise(
+						title="Twitter",
+						href="https://twitter.com/partheseas"
+					)
+				//- ul
+				//-   li: a(href="mailto:mckayla@facet.ai") Email me
+				//- ul
+				//-   li: a(href="https://github.com/partheseas") Github
+				//-   li: a(href="https://instagram.com/partheseas") Instagram
+				//-   li: a(href="https://linkedin.com/in/mckaylawashburn") Linkedin
+				//-   li: a(href="https://twitter.com/partheseas") Twitter
+			div
+				p: strong Apps
+				ul
+					li: a(href="https://facet.ai") Facet
+					li: a(href="/lavender/") Lavender
+					li: a(href="/observatory/") Observatory
+			div
+				p: strong Open Source
+				ul
+					li: a(href="/gardens/") gardens
+					li: a(href="https://github.com/partheseas/string-spirits/") string-spirits
+					li: a(href="https://github.com/partheseas/unzzz/") unzzz
+
+		block scripts

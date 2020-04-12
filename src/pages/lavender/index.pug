@@ -1,0 +1,66 @@
+extends ../layout.pug
+
+block head
+	title Lavender
+	link(rel="stylesheet", type="text/css", href="lavender.scss")
+
+block body
+	section#banner
+		h1 Lavender
+
+	section#content
+		h1 A Game Boy Advance emulator that runs in your browser. 🎮
+		p.
+			It is written in Rust and compiles to WebAssembly, with a graphics backend
+			that is powered by WebGL.
+		p.
+			In laymans terms, this means that it can run on
+			essentially any device with a modern browser, and is performant and
+			efficient enough to even run on smart phones with only minimal power draw.
+		p.
+			Upload your ROMs to sync them (and your game saves) between all of the
+			devices that you want to use Lavender on.
+			
+		//- a.button(href="https://lavender.rs") Launch
+		a.button(href="#") Coming soon
+
+		h3 The book
+		p.
+			Along with the available source code, I also wrote a book about the
+			internals of the Game Boy Advance and how to emulate it. It covers an
+			exciting range of topics, such as...
+			
+		ul.book-contents
+			li Technical Specifications
+			li CPU Architecture
+			li Instruction encoding
+			li Memory Layout
+			li BIOS: What you should know
+			li ROM file layouts
+			li Interacting with the outside world
+			ul
+				li IO Registers and CPU interupts
+				li VRAM, Palette, and Object details
+			li How cartridge save files work
+			li Testing your emulator for accuracy
+
+		//- a.button(href="https://dev.lavender.rs/book/") Read the book
+		//- a.button(href="https://partheseas.github.io/lavender/book/") Read the book
+		a.button(href="#") Coming soon
+
+		h3 The code
+		p.
+			The emulator is open source and available as a reference implementation
+			for those who want an easy to understand code base to read through while
+			they build their own emulator.
+			
+		ul.book-contents
+			li No magic header files
+			li No nasty abbreviated constant names
+			li No magical pointer nonsense
+			li Names should be descriptive and memorable
+			li Lots of inline comments
+
+		//- a.button(href="https://dev.lavender.rs/doc/") Code docs
+		//- a.button(href="https://partheseas.github.io/lavender/doc/") Code docs
+		a.button(href="https://github.com/partheseas/lavender/") Github
