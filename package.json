@@ -1,5 +1,6 @@
 {
 	"name": "mckay.la",
+	"version": "2.2.0-pre+parcel-nightly",
 	"license": "MIT",
 	"main": "public/index.html",
 	"dependencies": {
