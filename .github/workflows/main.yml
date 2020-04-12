@@ -23,7 +23,7 @@ jobs:
                   node-version: ${{ matrix.node-version }}
 
             - run: yarn
-            - run: yarn prettier --check .
+            - run: yarn prettier --ignore-path .gitignore --check .
             - run: yarn build
               env:
                   CI: true

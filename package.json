@@ -20,7 +20,7 @@
 		"build-all": "parcel build src/index.pug src/*/**/index.pug",
 		"dev": "parcel src/index.pug",
 		"dev-all": "parcel src/index.pug src/*/**/index.pug",
-		"fmt": "prettier --write .",
+		"fmt": "prettier --ignore-path .gitignore --write .",
 		"lh": "lighthouse --output html --output-path ./report.html"
 	}
 }
