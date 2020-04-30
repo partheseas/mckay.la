@@ -12,7 +12,7 @@ jobs:
 
         strategy:
             matrix:
-                node-version: [10.x, 12.x]
+                node-version: [12.x, 14.x]
 
         steps:
             - uses: actions/checkout@v2
@@ -27,16 +27,3 @@ jobs:
             - run: yarn build
               env:
                   CI: true
-
-            # This definitely feels wrong, because we don't know for sure
-            # if our deploy has finished building. In fact, I know it hasn't,
-            # because I haven't set up git integration on this repo so that I
-            # can deploy it manually.
-            - name: Audit URLs using Lighthouse
-              uses: treosh/lighthouse-ci-action@v2
-              with:
-                  urls: |
-                      https://mckay.la/
-                  # budgetPath: ./budget.json # test performance budgets
-                  uploadArtifacts: true # save results as an action artifacts
-                  temporaryPublicStorage: true # upload lighthouse report to the temporary storage

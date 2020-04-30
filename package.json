@@ -16,11 +16,9 @@
 		"typescript": "^3.8.3"
 	},
 	"scripts": {
-		"build": "parcel build src/index.pug --no-cache",
-		"build-all": "parcel build src/index.pug src/*/**/index.pug",
-		"dev": "parcel src/index.pug",
-		"dev-all": "parcel src/index.pug src/*/**/index.pug",
-		"fmt": "prettier --ignore-path .gitignore --write .",
-		"lh": "lighthouse --output html --output-path ./report.html"
+		"build": "parcel build src/index.pug src/*/**/index.pug",
+		"dev": "parcel src/index.pug src/*/**/index.pug",
+		"dev-x": "parcel src/index.pug",
+		"fmt": "prettier --ignore-path .gitignore --write ."
 	}
 }
