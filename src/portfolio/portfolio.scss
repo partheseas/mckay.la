@@ -1,52 +1,79 @@
-#banner {
-	#display {
-		position: absolute;
-		left: 0px;
-		top: 0px;
+#logo {
+	margin-top: 0.25in;
+}
 
-		z-index: -1;
+#display {
+	position: absolute;
+	left: 0px;
+	top: 0px;
 
-		width: 100%;
-		height: 7in;
+	z-index: -1;
 
-		overflow-x: hidden;
+	width: 100%;
+	height: 7in;
 
-		background-color: var(--light-violet);
-		// background-image: linear-gradient(-45deg, var(--light-yellow), var(--light-violet));
+	overflow-x: hidden;
+
+	background-color: var(--light-violet);
+	// background-image: linear-gradient(-45deg, var(--light-yellow), var(--light-violet));
+	background-image: linear-gradient(
+		-45deg,
+		var(--light-green),
+		var(--light-violet)
+	);
+	box-shadow: 0 0 15px #44444444;
+
+	&.yg {
 		background-image: linear-gradient(
 			-45deg,
 			var(--light-green),
+			var(--light-yellow)
+		);
+	}
+
+	&.py {
+		background-image: linear-gradient(
+			-45deg,
+			var(--light-yellow),
 			var(--light-violet)
 		);
-		box-shadow: 0 0 15px #44444444;
+	}
 
-		&.yg {
+	#banner {
+		position: absolute;
+		background-color: black;
+		box-shadow: 0 0 5px #777;
+		color: white;
+		text-align: center;
+		width: 100vw;
+		z-index: 10;
+
+		h6 {
+			-webkit-background-clip: text;
+			background-clip: text;
 			background-image: linear-gradient(
 				-45deg,
 				var(--light-green),
-				var(--light-yellow)
-			);
-		}
-
-		&.py {
-			background-image: linear-gradient(
-				-45deg,
-				var(--light-yellow),
 				var(--light-violet)
 			);
-		}
+			color: transparent;
+			font-size: 14px;
 
-		.floaty {
-			display: inline-block;
-			position: absolute;
-			width: 40px;
-			height: 40px;
-
-			opacity: 0;
-			transition: opacity 300ms;
+			.emoji {
+				color: white;
+			}
 		}
 	}
 
+	.floaty {
+		display: inline-block;
+		position: absolute;
+		width: 40px;
+		height: 40px;
+
+		opacity: 0;
+		transition: opacity 300ms;
+	}
 	a {
 		color: white;
 		font-weight: 700;
