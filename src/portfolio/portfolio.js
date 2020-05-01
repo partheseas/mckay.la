@@ -1,16 +1,4 @@
-const floatyColors = [
-	// 'lavender',
-	// 'thistle',
-	// 'palegreen',
-	// 'mediumaquamarine',
-	// 'mediumseagreen',
-	// 'lightsteelblue',
-	// 'cornflowerblue',
-	// 'mediumpurple',
-	// 'royalblue',
-	// 'darkseagreen',
-	"#d4d4d444",
-];
+const gradients = ["yg", "py", ""];
 
 const floatyShapes = [
 	"50% 50% 50% 50%",
@@ -25,6 +13,8 @@ const lessThanMagnitude = (x) => Math.floor(Math.random() * x * 2 - x);
 
 window.addEventListener("DOMContentLoaded", () => {
 	const display = document.querySelector("#display");
+
+	display.className = pickOne(gradients);
 
 	const spacing = 50;
 	let cx, cy, fx, fy, i;
@@ -45,7 +35,7 @@ window.addEventListener("DOMContentLoaded", () => {
 		const dies = friends > 20 && Math.round(Math.random());
 
 		friend.className = "floaty";
-		friend.style.backgroundColor = pickOne(floatyColors);
+		friend.style.backgroundColor = "#fff7";
 		friend.style.borderRadius = pickOne(floatyShapes);
 		friend.style.left = `${cx + lessThanMagnitude(fx) * spacing}px`;
 		friend.style.top = `${cy + lessThanMagnitude(fy) * spacing}px`;

@@ -24,6 +24,7 @@ jobs:
 
             - run: yarn
             - run: yarn prettier --ignore-path .gitignore --check .
-            - run: yarn build
+            # This needs to be changed to yarn build one day once it actually works
+            - run: yarn build-x
               env:
                   CI: true
