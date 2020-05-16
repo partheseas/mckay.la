@@ -1,4 +1,5 @@
-const { Fragment, useState } = React;
+import React, { Fragment, useState } from "react";
+import ReactDOM from "react-dom";
 
 window.addEventListener("hashchange", () => window.scrollBy(0, -225));
 

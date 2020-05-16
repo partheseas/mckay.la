@@ -2,12 +2,10 @@ extends ../../template/template.pug
 
 block head
 	title Hell
-	//- link(rel="stylesheet" type="text/css" href="resources/design.css")
+	link(rel="stylesheet", type="text/css", href="resources/design.css")
 
 block scripts
-	//- script(type="application/javascript" src="https://unpkg.com/react@16/umd/react.development.js")
-	//- script(type="application/javascript" src="https://unpkg.com/react-dom@16/umd/react-dom.development.js")
-	//- script(type="application/javascript" src="resources/menu.js")
+	script(type="application/javascript", src="resources/menu.js")
 
 block body
 	section.banner
@@ -16,9 +14,9 @@ block body
 		p.active Continue
 		p Options
 		h1.sans-serif Hell
-		h6.version &copy; 2019 &hearts; McKayla &middot; 0.0.0-2019-07-15-22-24
+		h6.version &copy; 2020 &hearts; McKayla &middot; 0.0.0-2020-05-16-14-41
 
-	section(style="max-width: 11in")
+	section.container
 		h2#toc: a(href="#toc") Contents
 		section
 			ol
