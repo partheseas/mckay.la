@@ -16,8 +16,7 @@
 		"typescript": "^3.9.2"
 	},
 	"scripts": {
-		"build": "parcel build src/index.pug",
-		"build-x": "parcel build src/index.pug src/*/**/index.pug",
+		"build": "parcel build src/index.pug src/*/**/index.pug",
 		"dev": "parcel src/index.pug src/*/**/index.pug",
 		"dev-x": "parcel src/index.pug",
 		"fmt": "prettier --ignore-path .gitignore --write ."
