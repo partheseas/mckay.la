@@ -1,6 +1,6 @@
 {
 	"name": "mckay.la",
-	"version": "2.2.0-pre+parcel-nightly",
+	"version": "2.2.0",
 	"license": "MIT",
 	"main": "public/index.html",
 	"dependencies": {
@@ -9,11 +9,11 @@
 	},
 	"devDependencies": {
 		"@prettier/plugin-pug": "^1.2.0",
-		"parcel": "^2.0.0-nightly.185",
+		"parcel": "^1.12.4",
 		"prettier": "^2.0.4",
 		"pug": "^2.0.4",
 		"sass": "^1.26.0",
-		"typescript": "^3.8.3"
+		"typescript": "^3.9.2"
 	},
 	"scripts": {
 		"build": "parcel build src/index.pug",
