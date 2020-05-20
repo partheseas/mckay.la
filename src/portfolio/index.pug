@@ -16,59 +16,31 @@ block scripts
 
 block body
 	#display
-		#banner: h6 Currently a little bit broken. Pardon my dust. <span class="emoji">😅</span>
-		//- Contact me ›
+		//- #banner: h6 Currently a little bit broken. Pardon my dust. <span class="emoji">😅</span>
+		//- #banner: h6 Contact me ›
+		//- #banner: h6 v2.2.2
+		//- #banner: a(href="https://twitch.tv/partheseas"): h6 Currently playing Celeste ›&nbsp;&nbsp;&nbsp;<span class="emoji">🍓</span>
 
-	section#projects
+	#projects
 		.profile.enhance
 			img(src="/resources/lully2.png")
 			h2 McKayla Washburn
 			p.
 				Aspiring wannabe &middot; <a href="https://facet.ai"><strong class="facet">@Facet</strong></a> &middot; she/her
 				
-		h1 Projects
+		//- h1.title Projects
 
-		.large.left
-			img.screenshot(src="/resources/screenshots/facet.png")
+		.large.right
+			img.screenshot(src="/resources/screenshots/app-screen-lg.jpg")
 			.description
 				h2
 					a(href="https://facet.ai/") Facet
-				h6 A new way to create stunning visual content 📸
+				h6 Unmask your creativity 📸
 				p.
-					Facet makes it easier for you to edit content, not pixels. Facet understands
-					the intent behind your actions, and can help you edit photos faster.
+					Facet is a content-aware image editor for crafting stunning visual stories.
+					It makes it seemless to iterate quickly and share your work with others.
 				br
-				p: +bubblelist('Apollo', 'GraphQL', 'React', 'Redux', 'TypeScript', 'WebGL', 'Webpack')
-
-		.large.right
-			img.screenshot(src="/resources/screenshots/observatory.png")
-			.description
-				h2
-					a(href="/observatory/") Observatory
-					| &nbsp;&middot;
-					a.uil.uil-github.light-violet(
-						title="Github",
-						href="https://github.com/partheseas/observatory"
-					)
-				h6 A modern cross-platform disk usage analyzer 🔭
-				p.
-					Observatory utilizies a radial sunburst graph to to make it painless and simple
-					to piece together exactly what is taking up space on your computer.
-				br
-				p: +bubblelist('Electron', 'Parcel', 'React', 'Redux', 'Sass')
-
-				h4 
-					a(href="https://github.com/partheseas/electron-redux") electron-redux
-					| &nbsp;&middot;
-					a.uil.uil-github.light-violet(
-						title="Github",
-						href="https://github.com/partheseas/electron-redux"
-					)
-					a.uil.uil-package.red(
-						title="npm",
-						href="https://www.npmjs.com/package/@mckayla/electron-redux"
-					)
-				h6 Sync state between your processes
+				p: +bubblelist('Apollo', 'GraphQL', 'ML', 'Python', 'React', 'Redux', 'TypeScript', 'WebGL', 'Webpack')
 
 		.large.left
 			img.screenshot(src="/resources/screenshots/lavender.jpg")
@@ -90,22 +62,18 @@ block body
 				p: +bubblelist('ARM v4T Assembly', 'Rust', 'wasm', 'WebGL', 'Webpack')
 
 		.large.right
-			img.screenshot(src="/resources/screenshots/gardens.jpg")
+			img.screenshot(src="/resources/screenshots/observatory.png")
 			.description
 				h2
-					a(href="/gardens/") Gardens
+					a(href="/observatory/") Observatory
 					| &nbsp;&middot;
-					a.uil.uil-books.sky(title="Documentation", href="https://gardens.now.sh/")
 					a.uil.uil-github.light-violet(
 						title="Github",
-						href="https://github.com/partheseas/gardens"
+						href="https://github.com/partheseas/observatory"
 					)
-					a.uil.uil-package.red(
-						title="npm",
-						href="https://npmjs.com/package/gardens"
-					)
-				h6 A useful logging utility for JavaScript <em>everywhere</em>. 🎉
-				p Gardens helps you keep your error and debugging output consistent in a managable way.
+				h6 A cross-platform sunburst-style disk usage analyzer 🔭
+				p.
+					Observatory utilizies a radial sunburst graph to to make it painless and simple
+					to piece together exactly what is taking up space on your computer.
 				br
-				p: +bubblelist('Node.js', 'Deno', 'React Native', 'Electron', 'Browsers')
-				p: +bubblelist('AVA', 'Rollup', 'TypeDoc', 'TypeScript')
+				p: +bubblelist('Electron', 'Parcel', 'React', 'Redux', 'Sass')

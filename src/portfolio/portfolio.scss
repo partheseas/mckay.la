@@ -1,12 +1,11 @@
-#logo {
-	margin-top: 0.25in;
-}
+// #logo {
+// 	margin-top: 0.25in;
+// }
 
 #display {
 	position: absolute;
 	left: 0px;
 	top: 0px;
-
 	z-index: -1;
 
 	width: 100%;
@@ -39,34 +38,6 @@
 		);
 	}
 
-	#banner {
-		position: absolute;
-		background-color: black;
-		box-shadow: 0 0 5px #777;
-		color: white;
-		text-align: center;
-		width: 100vw;
-		z-index: 10;
-
-		padding-bottom: 5px;
-
-		h6 {
-			-webkit-background-clip: text;
-			background-clip: text;
-			background-image: linear-gradient(
-				-45deg,
-				var(--light-green),
-				var(--light-violet)
-			);
-			color: transparent;
-			font-size: 14px;
-
-			.emoji {
-				color: white;
-			}
-		}
-	}
-
 	.floaty {
 		display: inline-block;
 		position: absolute;
@@ -76,9 +47,33 @@
 		opacity: 0;
 		transition: opacity 300ms;
 	}
-	a {
-		color: white;
-		font-weight: 700;
+}
+
+#banner {
+	position: absolute;
+	background-color: black;
+	box-shadow: 0 0 15px #777;
+	color: white;
+	text-align: center;
+	width: 100vw;
+	z-index: 10;
+
+	padding-bottom: 5px;
+
+	h6 {
+		-webkit-background-clip: text;
+		background-clip: text;
+		background-image: linear-gradient(
+			-45deg,
+			var(--light-green),
+			var(--light-violet)
+		);
+		color: transparent;
+		font-size: 14px;
+
+		.emoji {
+			color: white;
+		}
 	}
 }
 
@@ -88,13 +83,14 @@
 
 .bubble {
 	display: inline-block;
-	background-color: lavender;
+	background-color: #f3f3f3;
 	padding: 6px 8px;
 	margin: 0 7px 10px 0;
 	border-radius: 4px;
 }
 
 #projects {
+	padding: 0 6vw;
 	margin: auto;
 	max-width: 14in;
 
@@ -121,11 +117,19 @@
 		}
 	}
 
+	h1.title {
+		display: none;
+	}
+
 	div.large {
 		margin-bottom: 1in;
 	}
 
 	@media screen and (min-width: 11in) {
+		h1.title {
+			display: initial;
+		}
+
 		div.profile,
 		div.large {
 			padding: 0.25in;
@@ -137,10 +141,13 @@
 
 		div.large {
 			min-height: 4.5in;
+
 			display: grid;
 			grid-template-columns: 1fr 5.1in;
 			grid-template-areas: "left right";
 			grid-gap: 0.5in;
+
+			align-items: center;
 
 			// Large project images should have a ratio of 1.3745318352 for consistency
 			img {
@@ -150,10 +157,6 @@
 
 		div.enhance {
 			transform: scale(1.05);
-		}
-
-		div.description {
-			padding-top: 0.5in;
 		}
 
 		div.right {

@@ -1,6 +1,6 @@
 {
 	"name": "mckay.la",
-	"version": "2.2.0",
+	"version": "2.2.2",
 	"license": "MIT",
 	"main": "public/index.html",
 	"dependencies": {

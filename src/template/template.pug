@@ -44,8 +44,8 @@ html(lang="en-US")
 		section#footer
 			#copyright
 				p &copy; 2020 &hearts; <a href="/">McKayla</a>
-			#contact
-				p: strong About
+				//- #contact
+				//- 	p: strong About
 				h2.social-icons
 					a.uil.uil-github.light-violet(
 						title="Github",
@@ -63,17 +63,35 @@ html(lang="en-US")
 						title="Twitter",
 						href="https://twitter.com/partheseas"
 					)
+
+			div
+				p: strong Open Source
+				ul
+					//- li
+						a(href="https://github.com/partheseas/crawfish/") crawfish
+						.tooltip A Rust library for decoding Canon Raw images
+					li
+						a(href="https://github.com/partheseas/electron-redux/") electron-redux
+						.tooltip Make sure all your stores are on the same page
+					li
+						a(href="https://github.com/partheseas/string-spirits/") string-spirits
+						.tooltip Get the spirit of a string, without the whole thing
+					li
+						a(href="https://github.com/partheseas/unzzz/") unzzz
+						.tooltip A lightweight library for unzipping zip files
+
 			div
 				p: strong Apps
 				ul
 					li: a(href="https://facet.ai") Facet
 					li: a(href="/lavender/") Lavender
 					li: a(href="/observatory/") Observatory
+
 			div
-				p: strong Open Source
+				p: strong Doodles
 				ul
-					li: a(href="/gardens/") gardens
-					li: a(href="https://github.com/partheseas/string-spirits/") string-spirits
-					li: a(href="https://github.com/partheseas/unzzz/") unzzz
+					li: a(href="https://dangerous.now.sh") Dangerous
+					li: a(href="https://lowowee.now.sh") Lowowee
+					li: a(href="https://soroboro.now.sh") Ouroboros
 
 		block scripts
