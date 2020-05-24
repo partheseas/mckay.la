@@ -4,6 +4,13 @@
 # Dependencies
 node_modules
 
-# Exclude build directory and cache
+# Build artifacts
+.cache
 .parcel-cache
+dist
 public
+target
+
+# Vercel
+.now
+.vercel

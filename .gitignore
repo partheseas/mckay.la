@@ -9,6 +9,7 @@ node_modules
 .parcel-cache
 dist
 public
+target
 
 # Vercel
 .now

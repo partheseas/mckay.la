@@ -2,7 +2,7 @@
 	"name": "mckay.la",
 	"version": "2.2.2",
 	"license": "MIT",
-	"main": "public/index.html",
+	"main": "dist/index.html",
 	"dependencies": {
 		"react": "^16.13.0",
 		"react-dom": "^16.13.0"
