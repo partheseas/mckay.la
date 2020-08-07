@@ -27,9 +27,14 @@
 	}
 }
 
+.line {
+	display: block;
+}
+
 a.uil {
 	display: inline-block;
 	transition: transform 300ms;
+	font-size: 2.1rem;
 
 	&:hover {
 		text-decoration: none;

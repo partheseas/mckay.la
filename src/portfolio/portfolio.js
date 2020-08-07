@@ -1,4 +1,7 @@
-const gradients = ["yg", "py", ""];
+const gradients =
+	new Date().getMonth() === 5
+		? ["pride", "trans", "lesbian", "femme"]
+		: ["yg", "py", ""];
 
 const floatyShapes = [
 	"50% 50% 50% 50%",
@@ -12,9 +15,7 @@ const pickOne = (list) => list[Math.floor(Math.random() * list.length)];
 const lessThanMagnitude = (x) => Math.floor(Math.random() * x * 2 - x);
 
 window.addEventListener("DOMContentLoaded", () => {
-	const display = document.querySelector("#display");
-
-	display.className = pickOne(gradients);
+	document.body.className = pickOne(gradients);
 
 	const spacing = 50;
 	let cx, cy, fx, fy, i;

@@ -2,6 +2,15 @@
 // 	margin-top: 0.25in;
 // }
 
+.femme #logo {
+	--accent-color: black;
+}
+
+.lesbian #projects .profile,
+.trans #projects .profile {
+	color: black;
+}
+
 #display {
 	position: absolute;
 	left: 0px;
@@ -14,7 +23,6 @@
 	overflow-x: hidden;
 
 	background-color: var(--light-violet);
-	// background-image: linear-gradient(-45deg, var(--light-yellow), var(--light-violet));
 	background-image: linear-gradient(
 		-45deg,
 		var(--light-green),
@@ -22,7 +30,86 @@
 	);
 	box-shadow: 0 0 15px #44444444;
 
-	&.yg {
+	.pride & {
+		background-image: linear-gradient(
+			-45deg,
+			var(--light-violet),
+			var(--light-blue),
+			var(--light-green),
+			var(--light-emerald),
+			var(--light-yellow),
+			var(--light-orange),
+			var(--red)
+		);
+	}
+
+	.trans & {
+		background-image: linear-gradient(
+			-45deg,
+			var(--light-sky) 0%,
+			var(--light-sky) 20%,
+			var(--light-magenta) 20%,
+			var(--light-magenta) 40%,
+			white 40%,
+			white 60%,
+			var(--light-magenta) 60%,
+			var(--light-magenta) 80%,
+			var(--light-sky) 80%,
+			var(--light-sky) 100%
+		);
+	}
+
+	.femme & {
+		background-image: linear-gradient(
+			135deg,
+			white 0%,
+			white 25%,
+			lightpink 25%,
+			lightpink 50%,
+			var(--pink) 50%,
+			var(--pink) 75%,
+			#222 75%,
+			#222 100%
+		);
+	}
+
+	// .lesbian & {
+	// 	background-image: linear-gradient(
+	// 		135deg,
+	// 		var(--red) 0%,
+	// 		var(--red) 20%,
+	// 		var(--light-orange) 20%,
+	// 		var(--light-orange) 40%,
+	// 		white 40%,
+	// 		white 60%,
+	// 		var(--light-magenta) 60%,
+	// 		var(--light-magenta) 80%,
+	// 		var(--magenta) 80%,
+	// 		var(--magenta) 100%
+	// 	);
+	// }
+
+	.lesbian & {
+		background-image: linear-gradient(
+			135deg,
+			var(--dark-pink) 0%,
+			var(--dark-pink) 15%,
+			var(--magenta) 15%,
+			var(--magenta) 29%,
+			var(--light-magenta) 29%,
+			var(--light-magenta) 43%,
+			white 43%,
+			white 57%,
+			lightpink 57%,
+			lightpink 71%,
+			var(--red) 71%,
+			var(--red) 85%,
+			var(--dark-red) 85%,
+			var(--dark-red) 100%
+		);
+	}
+
+	.yg & {
 		background-image: linear-gradient(
 			-45deg,
 			var(--light-green),
@@ -30,7 +117,7 @@
 		);
 	}
 
-	&.py {
+	.py & {
 		background-image: linear-gradient(
 			-45deg,
 			var(--light-yellow),
@@ -52,7 +139,7 @@
 #banner {
 	position: absolute;
 	background-color: black;
-	box-shadow: 0 0 15px #777;
+	box-shadow: 0 0 15px #4447;
 	color: white;
 	text-align: center;
 	width: 100vw;
@@ -79,6 +166,11 @@
 
 .facet {
 	color: #e639aa;
+}
+
+.femme .facet,
+.trans .facet {
+	color: black;
 }
 
 .bubble {

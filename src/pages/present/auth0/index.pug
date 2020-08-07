@@ -1,0 +1,103 @@
+extends ../present.pug
+
+block presentation
+	section(style="padding-top: 60vh")
+		h1 Auth0 &rarr; Auth10/10
+		h3 McKAYLA WASHBURN
+
+	section
+		h1 Local setup is a pain
+		ul
+			li Inconsistency across platforms
+			li Configuration of external services
+			li Especially difficult the first time
+
+	section
+		h1 Well that's a lot to tackle...
+		ul
+			li Yes it is
+			li But we don't have to do it all at once
+
+	section
+		h1 What's out there?
+		ul
+			li Docker
+			li Vagrant
+
+	section
+		h1 Vagrant
+		ul
+			li Really heavy
+			li Even installation is a big much
+			li But has a docker backend...
+
+	section
+		h1 Docker
+		ul
+			li We already use a lot of Docker!
+			li Soon we'll be using even more!
+			li.
+				Causes the occassional problem, but doesn't really seem to be a
+				big source of pain.
+
+	section
+		h1 Local setup is a pain
+		ul
+			li.strikethrough Inconsistency across platforms
+			li Configuration of external services
+			li Especially difficult the first time
+
+	section
+		h1 What services are causing the most pain?
+		ul
+			li LaunchDarkly - no problem
+			li Segment - same story
+			li Sentry - easy peasy
+			li Pusher - not really
+			li Stripe - a pain initially, but highly automated
+			li Auth0 - seems to be where people really get stuck
+
+	section
+		h1 What can make it better?
+		h3 Painpoints:
+		ul
+			li Hard to configure
+			li Really hard to work with locally
+			li Hard to interop
+			li Really hard to handle changes/migrations
+
+	section
+		h1 Dockerize it!
+		ul
+			li Not something they offer :(
+			li We've talked about mocking...
+
+	section
+		h1 Public servers
+		ul
+			li Low-power VPSs are plentiful and cheap
+			li High-power VPSs are not
+			li Run just backend remotely and use SSH port tunneling for DB + services
+			li We already do this in reverse for using dev services with local backend
+			li Public IP address solves tunneling/pagekite problem
+			li.
+				Introduces additional setup burder, but with Terraform + bash scripts
+				it could be pretty heavily automated
+			li Time might be better invested elsewhere
+
+	section
+		h1 Just automate what we can?
+		ul
+			li I've automated a tiny bit of Auth0 stuff, so we have a starting point
+			li Tenants cannot be created by API
+			li But settings can be applied
+			li Applications can be completely automated
+
+	section
+		h1 Interop?
+		ul
+			li Probably just an enternal problem
+			li But rolling our own authentication can be messy
+			ul
+				li 2FA
+				li Session highjacking

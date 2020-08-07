@@ -32,6 +32,12 @@ if (!mobile) {
 					case 38:
 						startAutoScrolling(--panel, 500);
 						break;
+					case 192:
+						if (document.webkitCurrentFullScreenElement) {
+							document.webkitExitFullscreen();
+						} else {
+							document.documentElement.webkitRequestFullscreen();
+						}
 				}
 			}
 		});
