@@ -30,17 +30,41 @@ block body
 
 		//- h1.title Projects
 
-		.large.right
+		.large.left
 			img.screenshot(src="/resources/screenshots/app-screen-lg.jpg")
 			.description
 				h2
 					a(href="https://facet.ai/") Facet
+					| &nbsp;&middot;
+					a.uil.uil-twitter.light-sky(
+						title="Twitter",
+						href="https://twitter.com/facet_ai"
+					)
 				h6 Unmask your creativity 📸
 				p.
 					Facet is a content-aware image editor for crafting stunning visual stories.
 					It makes it seemless to iterate quickly and share your work with others.
 				br
-				p: +bubblelist('Apollo', 'GraphQL', 'ML', 'Python', 'React', 'Redux', 'TypeScript', 'WebGL', 'Webpack')
+				p: +bubblelist('Apollo', 'GraphQL', 'Python', 'React', 'Redux', 'TypeScript', 'WebGL', 'Webpack')
+
+		.large.right
+			img.screenshot(src="/resources/screenshots/dough.png")
+			.description
+				h2
+					a(href="https://dough.fi/") Dough
+					| &nbsp;&middot;
+					a.uil.uil-twitter.light-sky(
+						title="Twitter",
+						href="https://twitter.com/dough_fi"
+					)
+				h6 Take control of your finances 💰
+				p.
+					Dough lets you see your complete financial picture. No more guessing
+					how much you'll have left after you pay your bills. Set goals,
+					manage your expenses, and make budget that works for you, without
+					having to give out the logins to all of your bank accounts.
+				br
+				p: +bubblelist('Express', 'Parcel', 'Postgres', 'Prisma', 'React', 'Redux', 'TypeScript')
 
 		.large.left
 			img.screenshot(src="/resources/screenshots/lavender.jpg")
@@ -71,7 +95,7 @@ block body
 						title="Github",
 						href="https://github.com/partheseas/observatory"
 					)
-				h6 A cross-platform sunburst-style disk usage analyzer 🔭
+				h6 A cross-platform disk usage analyzer 🔭
 				p.
 					Observatory utilizies a radial sunburst graph to to make it painless and simple
 					to piece together exactly what is taking up space on your computer.
